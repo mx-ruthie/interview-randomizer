@@ -13,6 +13,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        {/* passing setParticipant the function like a prop down to the component, calling
+        from the child then passes state back up to the app.js file */}
         <ParticipantDetails participant={participant} setParticipant={setParticipant}/>
         <CompletionRecordForm />
         <QuestionSearchForm />
