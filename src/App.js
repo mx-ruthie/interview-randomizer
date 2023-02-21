@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <ParticipantDetails participant={participant} />
+        <ParticipantDetails participant={participant} setParticipant={setParticipant}/>
         <CompletionRecordForm />
         <QuestionSearchForm />
         <QuestionDetailsDisplay />
