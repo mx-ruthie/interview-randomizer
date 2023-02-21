@@ -4,18 +4,19 @@ import ParticipantDetails from './components/ParticipantDetails';
 import CompletionRecordForm from './components/CompletionRecordForm';
 import QuestionSearchForm from './components/QuestionSearchForm';
 import QuestionDetailsDisplay from './components/QuestionDetailsDisplay';
+import { useState } from 'react';
 
 function App() {
+   const [participant, setParticipant] = useState();
+   
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <ParticipantDetails />
+        <ParticipantDetails participant={participant} />
         <CompletionRecordForm />
         <QuestionSearchForm />
         <QuestionDetailsDisplay />
-
-
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
