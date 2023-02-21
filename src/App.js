@@ -3,6 +3,7 @@ import './App.css';
 import ParticipantDetails from './components/ParticipantDetails';
 import CompletionRecordForm from './components/CompletionRecordForm';
 import QuestionSearchForm from './components/QuestionSearchForm';
+import QuestionDetailsDisplay from './components/QuestionDetailsDisplay';
 
 function App() {
   return (
@@ -12,8 +13,9 @@ function App() {
         <ParticipantDetails />
         <CompletionRecordForm />
         <QuestionSearchForm />
+        <QuestionDetailsDisplay />
 
-        
+
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
