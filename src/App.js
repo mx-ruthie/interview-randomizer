@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import ParticipantDetails from './components/ParticipantDetails';
+import CompletionRecordForm from './components/CompletionRecordForm';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <ParticipantDetails />
+        <CompletionRecordForm />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
