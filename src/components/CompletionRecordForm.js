@@ -1,6 +1,12 @@
 const CompletionRecordForm = () => {
     return(
-        <div>Hi! This is the CompletionRecordForm component in action.</div>
+        <div>
+            <form className="completed">
+                <input type="radio" name="complete-status" /> Completed Correctly
+                <input type="radio"  name="complete-status"/> Did Not Complete Correctly
+                <button type="submit">Update Participant Record</button>
+            </form>
+        </div>
     )
 }
 
