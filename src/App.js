@@ -12,25 +12,14 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        
         {/* passing setParticipant the function like a prop down to the component, calling
         from the child then passes state back up to the app.js file */}
         <ParticipantDetails participant={participant} setParticipant={setParticipant}/>
         <QuestionSearchForm setQuestion={setQuestion}/>
         <QuestionDetailsDisplay />
         <CompletionRecordForm />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Day 1 of new project
         
-        </a>
       </header>
     </div>
   );
