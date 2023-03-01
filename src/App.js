@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import ParticipantDetails from './components/ParticipantDetails';
 import CompletionRecordForm from './components/CompletionRecordForm';
