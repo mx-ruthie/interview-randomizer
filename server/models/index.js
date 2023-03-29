@@ -3,9 +3,12 @@
 
 import Sequelize from 'sequelize';
 
-import getParticipantModel from './participant';
-import getQuestionModel from './question';
-
+import dotenv from 'dotenv';
+import getParticipantModel from './participant.js';
+import getQuestionModel from './question.js';
+dotenv.config()
+console.log("config")
+console.log("process.env.DATABASE", process.env.DATABASE);
 const sequelize = new Sequelize(
   process.env.DATABASE,
   process.env.DATABASE_USER,
