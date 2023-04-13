@@ -22,8 +22,8 @@ const sequelize = new Sequelize(
 );
 
 const models = {
-  User: getParticipantModel(sequelize, Sequelize),
-  Message: getQuestionModel(sequelize, Sequelize),
+  Participant: getParticipantModel(sequelize, Sequelize),
+  Question: getQuestionModel(sequelize, Sequelize),
 };
 
 Object.keys(models).forEach((key) => {
