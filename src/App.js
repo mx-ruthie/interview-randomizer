@@ -1,9 +1,9 @@
 //import logo from './logo.svg';
 import './App.css';
-import ParticipantDetails from './components/ParticipantDetails';
-import CompletionRecordForm from './components/CompletionRecordForm';
+//import ParticipantDetails from './components/ParticipantDetails';
+import InterviewerForm from './components/InterviewerForm';
 import QuestionSearchForm from './components/QuestionSearchForm';
-import QuestionDetailsDisplay from './components/QuestionDetailsDisplay';
+//import QuestionDetailsDisplay from './components/QuestionDetailsDisplay';
 import { useState } from 'react';
 
 function App() {
@@ -15,10 +15,11 @@ function App() {
         
         {/* passing setParticipant the function like a prop down to the component, calling
         from the child then passes state back up to the app.js file */}
-        <ParticipantDetails participant={participant} setParticipant={setParticipant}/>
-        <QuestionSearchForm setQuestion={setQuestion}/>
-        <QuestionDetailsDisplay />
-        <CompletionRecordForm />
+        {/* <ParticipantDetails participant={participant} setParticipant={setParticipant}/>
+        */}
+        <QuestionDetailsDisplay question={question}/> 
+        <QuestionSearchForm setQuestion={setQuestion}/> 
+        <InterviewerForm />
         
       </header>
     </div>

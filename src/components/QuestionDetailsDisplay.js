@@ -1,7 +1,7 @@
 const QuestionDetailsDisplay = () => {
     return(
         <div>
-            <p className="example">Once a question has been randomly selected onClick, it will display here</p>
+            {/* result that displays as a result of the questionsearchform */}
 
         </div>
     )
