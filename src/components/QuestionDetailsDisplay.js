@@ -1,8 +1,7 @@
-const QuestionDetailsDisplay = () => {
+const QuestionDetailsDisplay = (props) => {
     return(
         <div>
-            {/* result that displays as a result of the questionsearchform */}
-
+            {props.question};
         </div>
     )
 }
