@@ -9,7 +9,7 @@ import { useState } from 'react';
 function App() {
    const [participant, setParticipant] = useState();
    const [question, setQuestion] = useState("Select your category from the dropdown and click 'Randomize' to generate a code challenge.");
-   const [testCases, setTestCases] = useState("");
+   const [testCases, setTestCases] = useState([]);
 
   return (
     <div className="App">
