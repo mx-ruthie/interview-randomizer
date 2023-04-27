@@ -32,7 +32,8 @@ const QuestionSearchForm = (props) => {
           <select>
             <option value="strings">Strings</option>
             <option value="Arrays">Arrays</option>
-            <option value="booleans-and-integers">Booleans and Integers</option>
+            <option value="booleans">Booleans</option>
+            <option value="integers">Integers</option>
             <option value="objects">Objects</option>
           </select>
         </label>

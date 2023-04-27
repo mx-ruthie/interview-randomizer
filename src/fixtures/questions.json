@@ -1,6 +1,6 @@
 {
 	"questions": [{
-		"category": "boolean",	
+		"category": "booleans",	
         "text": "The parameter weekday is true if it is a weekday, and the parameter vacation is true if we are on vacation. We sleep in if it is not a weekday or we're on vacation. Return true if we sleep in.",
 			"testCases": [
 				"sleep_in(false, false) → true;",
@@ -9,7 +9,7 @@
 			]
 		},
 		{
-			"category": "integer",
+			"category": "integers",
             "text": "Given an int n, return the absolute difference between n and 21, except return double the absolute difference if n is over 21.",
 			"testCases": [
 				"diff21(19) → 2;",
@@ -18,6 +18,7 @@
 			]
 		},
 		{
+			"category": "booleans",
 			"text": "Given an int n, return true if it is within 10 of 100 or 200. Note: abs(num) computes the absolute value of a number.",
 			"testCases": [
 				"near_hundred(93) → true;",
@@ -26,6 +27,7 @@
 			]
 		},
 		{
+			"category": "strings",
 			"text": "Given a non-empty string and an int n, return a new string where the char at index n has been removed. The value of n will be a valid index of a char in the original string (i.e. n will be in the range 0..len(str)-1 inclusive).",
 			"testCases": [
 				"missing_char('kitten', 1) → 'ktten';",
@@ -34,6 +36,7 @@
 			]
 		},
 		{
+			"category": "booleans",
 			"text": "We have two monkeys, a and b, and the parameters a_smile and b_smile indicate if each is smiling. We are in trouble if they are both smiling or if neither of them is smiling. Return true if we are in trouble.",
 			"testCases": [
 				"monkey_trouble(true, true) → true;",
@@ -42,6 +45,7 @@
 			]
 		},
 		{
+			"category": "booleans",
 			"text": "We have a loud talking parrot. The 'hour' parameter is the current hour time in the range 0..23. We are in trouble if the parrot is talking and the hour is before 7 or after 20. Return true if we are in trouble.",
 			"testCases": [
 				"parrot_trouble(true, 6) → true;",
@@ -50,6 +54,7 @@
 			]
 		},
 		{
+			"category": "booleans",
 			"text": "Given 2 int values, return true if one is negative and one is positive. Except if the parameter 'negative' is true, then return true only if both are negative.",
 			"testCases": [
 				"pos_neg(1, -1, false) → true;",
@@ -58,6 +63,7 @@
 			]
 		},
 		{
+			"category": "strings",
 			"text": "Given a string, return a new string where the first and last chars have been exchanged.",
 			"testCases": [
 				"front_back('code') → 'eodc';",
@@ -66,6 +72,7 @@
 			]
 		},
 		{
+			"category": "integers",
 			"text": "Given two int values, return their sum. Unless the two values are the same, then return double their sum.",
 			"testCases": [
 				"sum_double(1, 2) → 3;",
@@ -74,6 +81,7 @@
 			]
 		},
 		{
+			"category": "integers",
 			"text": "Given 2 ints, a and b, return true if one if them is 10 or if their sum is 10.", 
 			"testCases": [
 				"makes10(9, 10) → true;",
