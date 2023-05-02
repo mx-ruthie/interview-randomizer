@@ -33,7 +33,6 @@ app.get("/questions", async (req, res) => {
   res.json("hello from techtonica");
 });
 
-await sequelize.authenticate();
 
 //adding columns after creation of table by adding { alter: true } as a parameter according to this doc
 //https://sequelize.org/docs/v6/core-concepts/model-basics/#model-synchronization
