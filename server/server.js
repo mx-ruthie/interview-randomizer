@@ -30,7 +30,7 @@ app.get("/questions", async (req, res) => {
 //     );
   const questions = await models.Question.findAll();
   console.log("All questions:", JSON.stringify(questions));
-  res.json("hello from techtonica");
+  res.json(questions);
 });
 
 
