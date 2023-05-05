@@ -1,34 +1,40 @@
-import fakeData from '../fixtures/questions.json';
-// Worked with Cristina, opted to import JSON directly within the file for now
+//import fakeData from '../fixtures/questions.json';
+import { useState } from "react";
+
+
+
 
 const QuestionSearchForm = (props) => {
-// The fetch wasn't working correctly, and the response was 
-// delivering a localhost URL instead of the data.
-    //   async function fetchFakeData() {
-//     // console.log("inside the fetch data");
-//     const res = await fetch('../fixtures/questions.json');
-//     console.log("this is line 5", json);
-//     const json = await res.json();
-//     console.log("this is line 6", json);
-//     //return json;
-//   }
+ 
+const [questionText, setQuestionText] = useState("The question text will generate here.")
+const [testcases, setTestcases] = useState(["Testcase 1", "Testcase 2", "Testcase 3"]);
 
+props.setQuestion(questionText);
+    props.setTestCases(testcases);
+
+async function fetchQuestionData () {
+  const response = await fetch("http://localhost:8088/questions");
+  const questionJSON = await response.json();
+  setQuestionText(questionJSON[0].text);
+  
+  setTestcases(questionJSON[0].testCases);
+  return questionJSON;
+}
+console.log(questionText);
+console.log(testcases);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("inside the handleSubmit"
-    )
-    console.log(fakeData)
-    //fetchFakeData();
-     props.setQuestion(fakeData.questions[0].text);
-    //  need to map setTestCases one after the other 
-     props.setTestCases(fakeData.questions[0].testCases)
+    console.log("inside the handleSubmit")
+   fetchQuestionData();
+   
+    
     };
 
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <label>
+        {/* <label>
           <select>
             <option value="strings">Strings</option>
             <option value="Arrays">Arrays</option>
@@ -36,7 +42,7 @@ const QuestionSearchForm = (props) => {
             <option value="integers">Integers</option>
             <option value="objects">Objects</option>
           </select>
-        </label>
+        </label> */}
         {/* edited the submit to be a button instead of an input type */}
         <button type="submit" value="Randomize">
         Randomize
