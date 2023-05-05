@@ -1,6 +1,5 @@
 import express from "express";
 import cors from "cors";
-//import dotenv from 'dotenv';
 
 import models, { sequelize } from './models/index.js';
 
