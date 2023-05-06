@@ -16,7 +16,7 @@ const QuestionSearchForm = (props) => {
   props.setTestCases(testcases);
 
   async function fetchQuestionData() {
-    const response = await fetch("http://localhost:8088/questions");
+    const response = await fetch("/questions");
     const questionJSON = await response.json();
     //setting part of the results to state so that the results could be accessed outside of the fetch function
     setQuestionText(questionJSON[0].text);

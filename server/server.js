@@ -2,17 +2,20 @@ import express from "express";
 import cors from "cors";
 
 import models, { sequelize } from './models/index.js';
-
+import path from 'path';
 
 
 
 const app = express();
-const PORT = 8088;
+///Users/tpl622_1/code/interview-randomizer
+const REACT_BUILD_DIR = path.join(__dirname, '..', 'build');
+app.use(express.static(REACT_BUILD_DIR));
+const PORT = process.env.PORT || 8088;
 
 app.use(cors());
 
 app.get("/", (req, res) => {
-    res.json("hello from techtonica");
+    res.sendFile(path.join(REACT_BUILD_DIR, 'index.html'));
 });
 
 app.get("/questions", async (req, res) => {
