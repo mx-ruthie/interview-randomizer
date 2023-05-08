@@ -1,0 +1,8 @@
+//https://sequelize.org/docs/v6/other-topics/migrations/#using-babel - note doc is out of date for line 2 (not babel-register anymore)
+require("@babel/register");
+const path = require('path');
+
+
+module.exports = {
+  'config': path.resolve('config', 'config.js')
+}

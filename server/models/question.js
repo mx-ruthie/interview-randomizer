@@ -1,5 +1,9 @@
 const getQuestionModel = (sequelize, { DataTypes }) => {
     const Question = sequelize.define('question', {
+      category: {
+        type: DataTypes.JSON,
+        allowNull: true,
+      },
       text: {
         type: DataTypes.STRING,
         unique: true,

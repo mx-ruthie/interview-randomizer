@@ -1,0 +1,661 @@
+{
+	"questions": [{
+		"category": "booleans",	
+        "text": "The parameter weekday is true if it is a weekday, and the parameter vacation is true if we are on vacation. We sleep in if it is not a weekday or we're on vacation. Return true if we sleep in.",
+			"testCases": [
+				"sleep_in(false, false) → true;",
+				"sleep_in(true, false) → false;",
+				"sleep_in(false, true) → true;"
+			]
+		},
+		{
+			"category": "integers",
+            "text": "Given an int n, return the absolute difference between n and 21, except return double the absolute difference if n is over 21.",
+			"testCases": [
+				"diff21(19) → 2;",
+				"diff21(10) → 11;",
+				"diff21(21) → 0;"
+			]
+		},
+		{
+			"category": "booleans",
+			"text": "Given an int n, return true if it is within 10 of 100 or 200. Note: abs(num) computes the absolute value of a number.",
+			"testCases": [
+				"near_hundred(93) → true;",
+				"near_hundred(90) → true;",
+				"near_hundred(89) → false;"
+			]
+		},
+		{
+			"category": "strings",
+			"text": "Given a non-empty string and an int n, return a new string where the char at index n has been removed. The value of n will be a valid index of a char in the original string (i.e. n will be in the range 0..len(str)-1 inclusive).",
+			"testCases": [
+				"missing_char('kitten', 1) → 'ktten';",
+				"missing_char('kitten', 0) → 'itten';",
+				"missing_char('kitten', 4) → 'kittn';"
+			]
+		},
+		{
+			"category": "booleans",
+			"text": "We have two monkeys, a and b, and the parameters a_smile and b_smile indicate if each is smiling. We are in trouble if they are both smiling or if neither of them is smiling. Return true if we are in trouble.",
+			"testCases": [
+				"monkey_trouble(true, true) → true;",
+				"monkey_trouble(false, false) → true;",
+				"monkey_trouble(true, false) → false;"
+			]
+		},
+		{
+			"category": "booleans",
+			"text": "We have a loud talking parrot. The 'hour' parameter is the current hour time in the range 0..23. We are in trouble if the parrot is talking and the hour is before 7 or after 20. Return true if we are in trouble.",
+			"testCases": [
+				"parrot_trouble(true, 6) → true;",
+				"parrot_trouble(true, 7) → false;",
+				"parrot_trouble(false, 6) → false;"
+			]
+		},
+		{
+			"category": "booleans",
+			"text": "Given 2 int values, return true if one is negative and one is positive. Except if the parameter 'negative' is true, then return true only if both are negative.",
+			"testCases": [
+				"pos_neg(1, -1, false) → true;",
+				"pos_neg(-1, 1, false) → true;",
+				"pos_neg(-4, -5, true) → true;"
+			]
+		},
+		{
+			"category": "strings",
+			"text": "Given a string, return a new string where the first and last chars have been exchanged.",
+			"testCases": [
+				"front_back('code') → 'eodc';",
+				"front_back('a') → 'a';",
+				"front_back('ab') → 'ba';"
+			]
+		},
+		{
+			"category": "integers",
+			"text": "Given two int values, return their sum. Unless the two values are the same, then return double their sum.",
+			"testCases": [
+				"sum_double(1, 2) → 3;",
+				"sum_double(3, 2) → 5;",
+				"sum_double(2, 2) → 8;"
+			]
+		},
+		{
+			"category": "strings",
+			"text": "Given a string, return a new string where 'not' has been added as the first word in the string. However, if the string already begins with 'not', return the string unchanged.",
+			"testCases": [
+				"not_string('candy') → 'not candy';",
+				"not_string('x') → 'not x';",
+				"not_string('not bad') → 'not bad';"
+			]
+		},
+		{
+			"category": "strings",
+			"text": "Given a string and a non-negative int n, we'll say that the front of the string is the first 3 chars, or whatever is there if the string is less than length 3. Return n copies of the front.",
+			"testCases": [
+				"front_times('Chocolate', 2) → 'ChoCho';",
+				"front_times('Chocolate', 3) → 'ChoChoCho';",
+				"front_times('Ok', 4) → 'OkOkOkOk';"
+			]
+		},
+		{
+			"category": "strings",
+			"text": "Given a string and a non-negative int n, return a larger string that is n copies of the original string.",
+			"testCases": [
+				"string_times('Hi', 2) → 'HiHi';",
+				"string_times('Hi', 3) → 'HiHiHi';",
+				"string_times('Hi', 1) → 'Hi';"
+			]
+		},
+		{
+			"category": "strings",
+			"text": "Given a non-empty string like 'Code' return a string like 'CCoCodCode'.",
+			"testCases": [
+				"string_splosion('Code') → 'CCoCodCode';",
+				"string_splosion('abc') → 'aababc';",
+				"string_splosion('ab') → 'aab';"
+			]
+		},
+		{
+			"category": "strings",
+			"text": "Given a string, return the count of the number of times that a substring length 2 appears in the string and also as the last 2 chars of the string, so 'hixxxhi' yields 1 (we won't count the end substring).",
+			"testCases": [
+				"last2('hixxhi') → 1;",
+				"last2('xaxxaxaxx') → 1;",
+				"last2('axxxaaxx') → 2;"
+			]
+		},
+		{
+			"category": "strings",
+			"text": "Given a string, return a new string made of every other char starting with the first, so 'Hello' yields 'Hlo'.",
+			"testCases": [
+				"string_bits('Hello') → 'Hlo';",
+				"string_bits('Hi') → 'H';",
+				"string_bits('Heeololeo') → 'Hello';"
+			]
+		},
+		{
+			"category": "strings",
+			"text": "Given 2 strings, a and b, return the number of the positions where they contain the same length 2 substring. So 'xxcaazz' and 'xxbaaz' yields 3, since the 'xx', 'aa', and 'az' substrings appear in the same place in both strings.",
+			"testCases": [
+				"string_match('xxcaazz', 'xxbaaz') → 3;",
+				"string_match('abc', 'abc') → 2;",
+				"string_match('abc', 'axc') → 0;"
+			]
+		},
+		{
+			"category": "strings",
+			"text": "Given a string representing a name, e.g. 'Bob', return a greeting of the form 'Hello Bob!'",
+			"testCases": [
+				"hello_name('Bob') → 'Hello Bob!';",
+				"hello_name('Alice') → 'Hello Alice!';",
+				"hello_name('X') → 'Hello X!';"
+			]
+		},
+		{
+			"category": "strings",
+			"text": "Given an 'out' string length 4, such as '<<>>', and a word, return a new string where the word is in the middle of the out string, e.g. '<<word>>'.",
+			"testCases": [
+				"make_out_word('<<>>', 'Yay') → '<<Yay>>';",
+				"make_out_word('<<>>', 'WooHoo') → '<<WooHoo>>';",
+				"make_out_word('[[]]', 'word') → '[[word]]';"
+			]
+		},
+        {
+			"category": "strings",
+			"text": "Given a string of even length, return the first half. So the string 'WooHoo' yields 'Woo'.",
+			"testCases": [
+				"first_half('WooHoo') → 'Woo';",
+				"first_half('HelloThere') → 'Hello';",
+				"first_half('abcdef') → 'abc';"
+			]
+		},
+		{
+			"category": "strings",
+			"text": "Given 2 strings, return their concatenation, except omit the first char of each. The strings will be at least length 1.",
+			"testCases": [
+				"non_start('Hello', 'There') → 'ellohere';",
+				"non_start('java', 'code') → 'avaode';",
+				"non_start('shotl', 'java') → 'hotlava';"
+			]
+		},
+		{
+			"category": "strings",
+			"text": "Given two strings, a and b, return the result of putting them together in the order abba, e.g. 'Hi' and 'Bye' returns 'HiByeByeHi'.",
+			"testCases": [
+				"make_abba('Hi', 'Bye') → 'HiByeByeHi';",
+				"make_abba('Yo', 'Alice') → 'YoAliceAliceYo';",
+				"make_abba('What', 'Up') → 'WhatUpUpWhat';"
+			]
+		},
+		{
+			"category": "strings",
+			"text": "Given a string, return a new string made of 3 copies of the last 2 chars of the original string. The string length will be at least 2.",
+			"testCases": [
+				"extra_end('Hello') → 'lololo';",
+				"extra_end('ab') → 'ababab';",
+				"extra_end('Hi') → 'HiHiHi';"
+			]
+		},
+		{
+			"category": "strings",
+			"text": "Given a string, return a version without the first and last char, so 'Hello' yields 'ell'. The string length will be at least 2.",
+			"testCases": [
+				"without_end('Hello') → 'ell';",
+				"without_end('java') → 'av';",
+				"without_end('coding') → 'odin';"
+			]
+		},
+        {
+			"category": "strings",
+			"text": "Given a string, return a 'rotated left 2' version where the first 2 chars are moved to the end. The string length will be at least 2.",
+			"testCases": [
+				"left2('Hello') → 'lloHe';",
+				"left2('java') → 'vaja';",
+				"left2('Hi') → 'Hi';"
+			]
+		},
+		{
+			"category": "strings",
+			"text": "The web is built with HTML strings like '<i>Yay</i>' which draws Yay as italic text. In this example, the 'i' tag makes <i> and </i> which surround the word 'Yay'. Given tag and word strings, create the HTML string with tags around the word, e.g. '<i>Yay</i>'",
+			"testCases": [
+				"make_tags('i', 'Yay') → '<i>Yay</i>';",
+				"make_tags('i', 'Hello') → '<i>Hello</i>';",
+				"make_tags('cite', 'Yay') → '<cite>Yay</cite>';"
+			]
+		},
+        {
+			"category": "strings",
+			"text": "Given a string, return the string made of its first two chars, so the String 'Hello' yields 'He'. If the string is shorter than length 2, return whatever there is, so 'X' yields 'X', and the empty string ' ' yields the empty string ' '.",
+			"testCases": [
+				"first_two('Hello') → 'He';",
+				"first_two('abcdefg') → 'ab';",
+				"first_two('ab') → 'ab';"
+			]
+		},
+		{
+			"category": "strings",
+			"text": "Given 2 strings, a and b, return a string of the form short+long+short, with the shorter string on the outside and the longer string on the inside. The strings will not be the same length, but they may be empty (length 0).",
+			"testCases": [
+				"combo_string('Hello', 'hi') → 'hiHellohi';",
+				"combo_string('hi', 'Hello') → 'hiHellohi';",
+				"combo_string('aaa', 'b') → 'baaab';"
+			]
+		},
+		{
+			"category": "strings",
+			"text": "Given a string, return a string where for every char in the original, there are two chars.",
+			"testCases": [
+				"double_char('The') → 'TThhee';",
+				"double_char('AAbb') → 'AAAAbbbb';",
+				"double_char('Hi-There') → 'HHii--TThheerree';"
+			]
+		},
+		{
+			"category": "strings",
+			"text": "Return the number of times that the string 'code' appears anywhere in the given string, except we'll accept any letter for the 'd', so 'cope' and 'cooe' count.",
+			"testCases": [
+				"count_code('aaacodebbb') → 1;",
+				"count_code('codexxcode') → 2;",
+				"count_code('cozexxcope') → 2;"
+			]
+		},
+		{
+			"category": "strings",
+			"text": "Return the number of times that the string 'hi' appears anywhere in the given string.",
+			"testCases": [
+				"count_hi('abc hi ho') → 1;",
+				"count_hi('ABChi hi') → 2;",
+				"count_hi('hihi') → 2;"
+			]
+		},
+		{
+			"category": "strings",
+			"text": "Given two strings, return true if either of the strings appears at the very end of the other string, ignoring upper/lower case differences (in other words, the computation should not be 'case sensitive'). ",
+			"testCases": [
+				"end_other('Hiabc', 'abc') → true;",
+				"end_other('AbC', 'HiaBc') → true;",
+				"end_other('abc', 'abXabc') → true;"
+			]
+		},
+		{
+			"category": "strings",
+			"text": "Return true if the string 'cat' and 'dog' appear the same number of times in the given string. ",
+			"testCases": [
+				"cat_dog('catdog') → true;",
+				"cat_dog('catcat') → false;",
+				"cat_dog('1cat1cadodog') → true;"
+			]
+		},
+		{
+			"category": "strings",
+			"text": "Return true if the given string contains an appearance of 'xyz' where the xyz is not directly preceded by a period (.). So 'xxyz' counts but 'x.xyz' does not.",
+			"testCases": [
+				"xyz_there('abcxyz') → true;",
+				"xyz_there('abc.xyz') → false;",
+				"xyz_there('xyz.abc') → true;"
+			]
+		},
+		{
+			"category": "strings",
+			"text": "Given a day of the week encoded as 0=Sun, 1=Mon, 2=Tue, ...6=Sat, and a boolean indicating if we are on vacation, return a string of the form '7:00' indicating when the alarm clock should ring. Weekdays, the alarm should be '7:00' and on the weekend it should be '10:00'. Unless we are on vacation -- then on weekdays it should be '10:00' and weekends it should be 'off'.",
+			"testCases": [
+				"alarm_clock(1, false) → '7:00';",
+				"alarm_clock(5, false) → '7:00';",
+				"alarm_clock(0, false) → '10:00';"
+			]
+		},
+		{
+			"category": "arrays",
+			"text": "Given an array of ints, return true if one of the first 4 elements in the array is a 9. The array length may be less than 4.",
+			"testCases": [
+				"array_front9([1, 2, 9, 3, 4]) → true;",
+				"array_front9([1, 2, 3, 4, 9]) → false;",
+				"array_front9([1, 2, 3, 4, 5]) → false;"
+			]
+		},
+		{
+			"category": "arrays",
+			"text": "Given an array of ints, return true if the sequence of numbers 1, 2, 3 appears in the array somewhere.",
+			"testCases": [
+				"array123([1, 1, 2, 3, 1]) → true;",
+				"array123([1, 1, 2, 4, 1]) → false;",
+				"array123([1, 1, 2, 1, 2, 3]) → true;"
+			]
+		},
+		{
+			"category": "arrays",
+			"text": "Given an array of ints, return the number of 9's in the array.",
+			"testCases": [
+				"array_count9([1, 2, 9]) → 1;",
+				"array_count9([1, 9, 9]) → 2;",
+				"array_count9([1, 9, 9, 3, 9]) → 3;"
+			]
+		},
+		{
+			"category": "arrays",
+			"text": "Given an array of ints, return true if 6 appears as either the first or last element in the array. The array will be length 1 or more. You must solve this in O(1)  time, which means without looping through the array.",
+			"testCases": [
+				"first_last6([1, 2, 6]) → true;",
+				"first_last6([6, 1, 2, 3]) → true;",
+				"first_last6([13, 6, 1, 2, 3]) → false;"
+			]
+		},
+		{
+			"category": "arrays",
+			"text": "Given 2 arrays of ints, a and b, return true if they have the same first element or they have the same last element. Both arrays will be length 1 or more.",
+			"testCases": [
+				"common_end([1, 2, 3], [7, 3]) → true;",
+				"common_end([1, 2, 3], [7, 3, 2]) → false;",
+				"common_end([1, 2, 3], [1, 3]) → true;"
+			]
+		},
+		{
+			"category": "arrays",
+			"text": "Given an array of ints with a length of 3, return a new array with the elements in reverse order.",
+			"testCases": [
+				"reverse3([1, 2, 3]) → [3, 2, 1];",
+				"reverse3([5, 11, 9]) → [9, 11, 5];",
+				"reverse3([7, 0, 0]) → [0, 0, 7];"
+			]
+		},
+		{
+			"category": "arrays",
+			"text": "Given 2 int arrays, a and b, each length 3, return a new array length 2 containing their middle elements.",
+			"testCases": [
+				"middle_way([1, 2, 3], [4, 5, 6]) → [2, 5];",
+				"middle_way([7, 7, 7], [3, 8, 0]) → [7, 8];",
+				"middle_way([5, 2, 9], [1, 4, 5]) → [2, 4];"
+			]
+		},
+		{
+			"category": "arrays",
+			"text": "Given an array of ints, return true if the array is length 1 or more, and the first element and the last element are equal.",
+			"testCases": [
+				"same_first_last([1, 2, 3]) → false;",
+				"same_first_last([1, 2, 3, 1]) → true;",
+				"same_first_last([1, 2, 1]) → true;"
+			]
+		},
+		{
+			"category": "arrays",
+			"text": "Given 2 int arrays, a and b, each with an odd number of 3 or more as a length, return a new array length 2 containing their middle elements.",
+			"testCases": [
+				"middle_way([1, 2, 3], [4, 5, 6]) → [2, 5];",
+				"middle_way([7, 7, 7, 7, 7], [3, 8, 0]) → [7, 8];",
+				"middle_way([3, 4, 1, 2, 5, 8, 9], [1, 4, 5]) → [2, 4];"
+			]
+		},
+		{
+			"category": "arrays",
+			"text": "Given an array of ints length 3, return the sum of all the elements.",
+			"testCases": [
+				"sum3([1, 2, 3]) → 6;",
+				"sum3([5, 11, 2]) → 18;",
+				"sum3([7, 0, 0]) → 7;"
+			]
+		},
+		{
+			"category": "arrays",
+			"text": "Given an array of ints length 3, figure out which is larger, the first or last element in the array, and set all the other elements to be that value. Return the changed array. Try to do this in O(1) space, which means without initializing a new array. ",
+			"testCases": [
+				"max_end3([1, 2, 3]) → [3, 3, 3];",
+				"max_end3([11, 5, 9]) → [11, 11, 11];",
+				"max_end3([2, 11, 3]) → [3, 3, 3];"
+			]
+		},
+		{
+			"category": "arrays",
+			"text": " Given an array of ints, return a new array length 2 containing the first and last elements from the original array. The original array will be length 1 or more.",
+			"testCases": [
+				"make_ends([1, 2, 3]) → [1, 3];",
+				"make_ends([1, 2, 3, 4]) → [1, 4];",
+				"make_ends([7, 4, 6, 2]) → [7, 2];"
+			]
+		},
+		{
+			"category": "arrays",
+			"text": "Given an array of ints length 3, return an array with the elements 'rotated left'.",
+			"testCases": [
+				"rotate_left3([1, 2, 3]) → [2, 3, 1];",
+				"rotate_left3([5, 11, 9]) → [11, 9, 5];",
+				"rotate_left3([7, 0, 0]) → [0, 0, 7];"
+			]
+		},
+		{
+			"category": "arrays",
+			"text": "Given an array of ints, return the sum of the first 2 elements in the array. If the array length is less than 2, just sum up the elements that exist, returning 0 if the array is length 0.",
+			"testCases": [
+				"sum2([1, 2, 3]) → 3;",
+				"sum2([1, 1]) → 2;",
+				"sum2([1, 1, 1, 1]) → 2;"
+			]
+		},
+		{
+			"category": "arrays",
+			"text": "Given an int array length 2, return true if it contains a 2 or a 3.",
+			"testCases": [
+				"has23([2, 5]) → true;",
+				"has23([4, 3]) → true;",
+				"has23([4, 5]) → false;"
+			]
+		},
+		{
+			"category": "arrays",
+			"text": "Return the sum of the numbers in the array, returning 0 for an empty array. Except the number 13 is very unlucky, so it does not count and numbers that come immediately after a 13 also do not count.",
+			"testCases": [
+				"sum13([1, 2, 2, 1]) → 6;",
+				"sum13([1, 1]) → 2;",
+				"sum13([1, 2, 2, 1, 13]) → 6;"
+			]
+		},
+		{
+			"category": "arrays",
+			"text": "Given an array length 1 or more of ints, return the difference between the largest and smallest values in the array. Try not to use any in-built function for calculating min or max. ",
+			"testCases": [
+				"big_diff([10, 3, 5, 6]) → 7;",
+				"big_diff([7, 2, 10, 9]) → 8;",
+				"big_diff([2, 10, 7, 2]) → 8;"
+			]
+		},
+		{
+			"category": "arrays",
+			"text": "Return the sum of the numbers in the array, except ignore sections of numbers starting with a 6 and extending to the next 7 (every 6 will be followed by at least one 7). Return 0 for no numbers.",
+			"testCases": [
+				"sum67([1, 2, 2]) → 5;",
+				"sum67([1, 2, 2, 6, 99, 99, 7]) → 5;",
+				"sum67([1, 1, 6, 7, 2]) → 4;"
+			]
+		},
+		{
+			"category": "arrays",
+			"text": "Given an array of ints, return true if the array contains a 2 next to a 2 somewhere.",
+			"testCases": [
+				"has22([1, 2, 2]) → true;",
+				"has22([1, 2, 1, 2]) → false;",
+				"has22([2, 1, 2]) → false;"
+			]
+		},
+		{
+			"category": "arrays",
+			"text": "Write a function that returns the first element in an array. ",
+			"testCases": [
+				"firstElement([1, 2, 3, 4, 5]) → 1;",
+				"firstElement([5, 6, 7, 8, 9, ]) → 5;",
+				"firstElement([12, 6, 47, 18, 91, ]) → 12;"
+			]
+		},
+		{
+			"category": "arrays",
+			"text": "There are two arrays with individual values, write a function to compute the sum of each individual index value from the given arrays.",
+			"testCases": [
+				"sumOfTwoArrays([1,0,2,3,4], [3,5,6,7,8,13]) → [4, 5, 8, 10, 12, 17];",
+				"sumOfTwoArrays([7, 3, 9, 5], [2, 4, 1, 2]) → [9, 7, 10, 7];",
+				"sumOfTwoArrays([10, 10, 10, 10], [2, 4, 6, 8]) → [12, 14, 16, 18];"
+			]
+		},
+        {
+			"category": "booleans",
+			"text": "When squirrels get together for a party, they like to have acorns. A squirrel party is successful when the number of acorns is between 40 and 60, inclusive. Unless it is the weekend, in which case there is no upper bound on the number of acorns. Return true if the party with the given values is successful, or false otherwise.",
+			"testCases": [
+				"acorns_party(30, false) → false;",
+				"acorns_party(50, false) → true;",
+				"acorns_party(70, true) → true;"
+			]
+		},
+        {
+			"category": "booleans",
+			"text": "You are driving a little too fast, and a police officer stops you. Write code to compute the result, encoded as an int value: 0=no ticket, 1=small ticket, 2=big ticket. If speed is 60 or less, the result is 0. If speed is between 61 and 80 inclusive, the result is 1. If speed is 81 or more, the result is 2. Unless it is your birthday -- on that day, your speed can be 5 higher in all cases.",
+			"testCases": [
+				"caught_speeding(60, false) → 0;",
+				"caught_speeding(65, false) → 1;",
+				"caught_speeding(65, true) → 0;"
+			]
+		},
+        {
+			"category": "integers",
+			"text": "The number 6 is a truly great number. Given two int values, a and b, return true if either one is 6. Or if their sum or difference is 6.",
+			"testCases": [
+				"love6(6, 4) → true;",
+				"love6(4, 5) → false;",
+				"love6(1, 5) → true;"
+			]
+		},
+        {
+			"category": "integers",
+			"text": "Given 2 ints, a and b, return their sum. However, sums in the range 10..19 inclusive, are forbidden, so in that case just return 20.",
+			"testCases": [
+				"sorta_sum(3, 4) → 7;",
+				"sorta_sum(9, 4) → 20;",
+				"sorta_sum(10, 11) → 21;"
+			]
+		},
+        {
+			"category": "integers",
+			"text": "You and your date are trying to get a table at a restaurant. The parameter 'you' is the stylishness of your clothes, in the range 0..10, and 'date' is the stylishness of your date's clothes. The result ‘getting the table’ is encoded as an int value with 0=no, 1=maybe, 2=yes. If either of you is very stylish, 8 or more, then the result is 2 (yes). With the exception that if either of you has style of 2 or less, then the result is 0 (no). Otherwise the result is 1 (maybe).",
+			"testCases": [
+				"date_fashion(5, 10) → 2;",
+				"date_fashion(5, 2) → 0;",
+				"date_fashion(5, 5) → 1;"
+			]
+		},
+        {
+			"category": "integers",
+			"text": "We want make a package of goal kilos of chocolate. We have small bars (1 kilo each) and big bars (5 kilos each). Return the number of small bars to use, assuming we always use big bars before small bars. Return -1 if it can't be done.",
+			"testCases": [
+				"make_chocolate(4, 1, 9) → 4;",
+				"make_chocolate(4, 1, 10) → -1;",
+				"make_chocolate(4, 1, 7) → 2;"
+			]
+		},
+        {
+			"category": "integers",
+			"text": "Create a function that accepts an integer and checks if it's even or odd.",
+			"testCases": [
+				"evenOrOdd(1) → // Odd;",
+				"evenOrOdd(2) → // Even;",
+				"evenOrOdd(3) →  // Odd;"
+			]
+		},
+        {
+			"category": "integers",
+			"text": "Given 3 int values, a b c, return their sum. However, if one of the values is 13 then it does not count towards the sum and values to its right do not count. So for example, if b is 13, then both b and c do not count.",
+			"testCases": [
+				"lucky_sum(1, 2, 3) → 6;",
+				"lucky_sum(1, 2, 13) → 3;",
+				"lucky_sum(1, 13, 3) → 1;"
+			]
+		},
+        {
+			"category": "integers",
+			"text": "Given 3 int values, a b c, return their sum. However, if one of the values is the same as another of the values, it does not count towards the sum.",
+			"testCases": [
+				"lone_sum(1, 2, 3) → 6;",
+				"lone_sum(3, 2, 3) → 2;",
+				"lone_sum(3, 3, 3) → 0;"
+			]
+		},
+		{
+			"category": "integers",
+			"text": "For this problem, we'll round an int value up to the next multiple of 10 if its rightmost digit is 5 or more, so 15 rounds up to 20. Alternately, round down to the previous multiple of 10 if its rightmost digit is less than 5, so 12 rounds down to 10. Given 3 ints, a b c, return the sum of their rounded values. To avoid code repetition, write a separate helper 'def round10(num):' and call it 3 times. Write the helper entirely below and at the same indent level as round_sum().",
+			"testCases": [
+				"round_sum(16, 17, 18) → 60;",
+				"round_sum(12, 13, 14) → 30;",
+				"round_sum(6, 4, 4) → 10;"
+			]
+		},
+        {
+			"category": "booleans",
+			"text": "Given a number n, return true if n is in the range 1..10, inclusive. Unless outside_mode is true, in which case return true if the number is less or equal to 1, or greater or equal to 10.",
+			"testCases": [
+				"in1to10(5, false) → true;",
+				"in1to10(11, false) → false;",
+				"in1to10(11, true) → true;"
+			]
+		},
+		{
+			"category": "booleans",
+			"text": "The squirrels in Palo Alto spend most of the day playing. In particular, they play if the temperature is between 60 and 90 (inclusive). Unless it is summer, then the upper limit is 100 instead of 90. Given an int temperature and a boolean is_summer, return true if the squirrels play and false otherwise.",
+			"testCases": [
+				"squirrel_play(70, false) → true;",
+				"squirrel_play(95, false) → false;",
+				"squirrel_play(95, true) → true;"
+			]
+		},
+		{
+			"category": "booleans",
+			"text": "Given a non-negative number 'num', return true if num is within 2 of a multiple of 10.",
+			"testCases": [
+				"near_ten(12) → true;",
+				"near_ten(17) → false;",
+				"near_ten(19) → true;"
+			]
+		},
+		{
+			"category": "booleans",
+			"text": "We want to make a row of bricks that is goal inches long. We have a number of small bricks (1 inch each) and big bricks (5 inches each). Return true if it is possible to make the goal by choosing from the given bricks. This is a little harder than it looks and can be done without any loops.",
+			"testCases": [
+				"make_bricks(3, 1, 8) → true;",
+				"make_bricks(3, 1, 9) → false;",
+				"make_bricks(3, 2, 10) → true;"
+			]
+		},
+		{
+			"category": "booleans",
+			"text": "Given three ints, a b c, return true if one of b or c is 'close' (differing by at most 1), while the other is 'far', differing from both other values by 2 or more.",
+			"testCases": [
+				"close_far(1, 2, 10) → true;",
+				"close_far(1, 2, 3) → false;",
+				"close_far(4, 1, 3) → true;"
+			]
+		},
+		{
+			"category": "booleans",
+			"text": "Write a function that returns true if the two arguments passed are exactly equal.",
+			"testCases": [
+				"isEqual(5,5) --> true;",
+				"isEqual('k',`k`) --> true;",
+				"isEqual('a','A') --> false"
+			]
+		},
+		{
+			"category": "booleans",
+			"text": "Write a function that will tell us if we have monkey trouble based on two arguments. We are in trouble if both monkeys are smiling or if neither of them is smiling. Return true if we are in trouble, false if we are not.",
+			"testCases": [
+				"monkeyTrouble('smile', 'smile') → True;",
+				"monkeyTrouble('smile', 'frown') → False;",
+				"monkeyTrouble('frown', 'frown') → True"
+			]
+		},
+		{
+			"category": "integers",
+			"text": "Given 2 ints, a and b, return true if one if them is 10 or if their sum is 10.", 
+			"testCases": [
+				"makes10(9, 10) → true;",
+				"makes10(9, 9) → false;",
+				"makes10(1, 9) → true;"
+			]
+		}
+	
+	]
+}

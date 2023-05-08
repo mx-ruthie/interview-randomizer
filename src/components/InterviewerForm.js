@@ -3,7 +3,7 @@ import { useState } from "react";
 
 //thinking about database modeling, this is a many to many relationship and there will be a junction table between users and questions
 
-const CompletionRecordForm = () => {
+const InterviewerForm = () => {
   // create state here and onSubmit (post)
   const [completeStatus, setCompleteStatus] = useState();
 
@@ -38,4 +38,4 @@ const CompletionRecordForm = () => {
   );
 };
 
-export default CompletionRecordForm;
+export default InterviewerForm;
