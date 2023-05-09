@@ -19,8 +19,9 @@ const QuestionSearchForm = (props) => {
     const response = await fetch("/questions");
     const questionJSON = await response.json();
     //setting part of the results to state so that the results could be accessed outside of the fetch function
-    setQuestionText(questionJSON[0].text);
-    setTestcases(questionJSON[0].testCases);
+    const randomIndex = Math.floor(Math.random() * questionJSON.length);
+    setQuestionText(questionJSON[randomIndex].text);
+    setTestcases(questionJSON[randomIndex].testCases);
     return questionJSON;
   }
   console.log(questionText);

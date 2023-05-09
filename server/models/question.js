@@ -4,9 +4,6 @@ const getQuestionModel = (sequelize, { DataTypes }) => {
       //I tried to retroactively add timestamps false, etc, but since the tables already exist I need to alter and drop these columns
       //instead of trying to trick sequelize into pretending they were never there by adding them after and hoping
       //alter table from server.js did the trick -- it didn't
-        // timestamps: false,
-        // createdAt: false,
-        // updatedAt: false,
       category: {
         type: DataTypes.STRING,
         allowNull: true,
@@ -24,7 +21,12 @@ const getQuestionModel = (sequelize, { DataTypes }) => {
       testCases: {
         type: DataTypes.JSON,
         allowNull: true,
-      },
+      }, 
+  
+
+    }, {
+      // Exclude timestamps from the table
+      timestamps: false
     });
   
     return Question;
