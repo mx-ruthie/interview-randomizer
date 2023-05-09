@@ -1,11 +1,18 @@
 const getQuestionModel = (sequelize, { DataTypes }) => {
     const Question = sequelize.define('question', {
+      //npx sequelize-cli db:seed:all (this is failing and the error is related to the createdAt, etc.) 
+      //I tried to retroactively add timestamps false, etc, but since the tables already exist I need to alter and drop these columns
+      //instead of trying to trick sequelize into pretending they were never there by adding them after and hoping
+      //alter table from server.js did the trick -- it didn't
+        // timestamps: false,
+        // createdAt: false,
+        // updatedAt: false,
       category: {
-        type: DataTypes.JSON,
+        type: DataTypes.STRING,
         allowNull: true,
       },
       text: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         unique: true,
         allowNull: false,
         validate: {

@@ -4,6 +4,7 @@
 import dotenv from 'dotenv';
 dotenv.config();
 
+console.log("I'm running this file")
 module.exports = {
   development: {
     username: process.env.DATABASE_USER,
