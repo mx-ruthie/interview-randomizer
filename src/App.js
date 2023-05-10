@@ -7,7 +7,7 @@ import QuestionDetailsDisplay from './components/QuestionDetailsDisplay';
 import { useState } from 'react';
 
 function App() {
-   const [participant, setParticipant] = useState();
+  // const [participant, setParticipant] = useState();
    const [question, setQuestion] = useState("Select your category from the dropdown and click 'Randomize' to generate a code challenge.");
    const [testCases, setTestCases] = useState([]);
 
