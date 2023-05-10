@@ -1,5 +1,5 @@
 //import fakeData from '../fixtures/questions.json';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const QuestionSearchForm = (props) => {
   const [questionText, setQuestionText] = useState(
@@ -12,19 +12,24 @@ const QuestionSearchForm = (props) => {
   ]);
 
   // moved these props outside of the handleSubmit so that they would generate before submitting 
+  useEffect(() => {
   props.setQuestion(questionText);
   props.setTestCases(testcases);
+  console.log(questionText);
+  console.log(testcases);
+}, [])
+
 
   async function fetchQuestionData() {
     const response = await fetch("/questions");
     const questionJSON = await response.json();
     //setting part of the results to state so that the results could be accessed outside of the fetch function
-    setQuestionText(questionJSON[0].text);
-    setTestcases(questionJSON[0].testCases);
+    const randomIndex = Math.floor(Math.random() * questionJSON.length);
+    setQuestionText(questionJSON[randomIndex].text);
+    setTestcases(questionJSON[randomIndex].testCases);
     return questionJSON;
   }
-  console.log(questionText);
-  console.log(testcases);
+  
 
   const handleSubmit = (event) => {
     event.preventDefault();

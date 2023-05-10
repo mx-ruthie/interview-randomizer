@@ -16,8 +16,18 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-   const fields = questionData;
-    return queryInterface.bulkInsert('Question', fields, {});
+//const map1 = array1.map(x => x * 2);
+
+    const fields = questionData.questions.map((question) => {
+      console.log('question', question);
+      //question = {text: "i am a question", testCases: ["case1", "case2"]}
+
+      // return {...question};
+      return { ...question, testCases: JSON.stringify(question.testCases) };
+    });
+
+   
+    return queryInterface.bulkInsert('questions', fields, {});
   },
 
   async down (queryInterface, Sequelize) {
