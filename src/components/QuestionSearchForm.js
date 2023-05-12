@@ -17,7 +17,7 @@ const QuestionSearchForm = (props) => {
   props.setTestCases(testcases);
   console.log(questionText);
   console.log(testcases);
-}, [])
+}, [props, questionText, testcases])
 
 
   async function fetchQuestionData() {
