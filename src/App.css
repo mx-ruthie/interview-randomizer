@@ -1,5 +1,117 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 1.2em;
+  line-height: 1.4em;
+  color: #0093B5;
+  background-color: white;
+  display: flex;
+ 
+
+}
 .App {
   text-align: center;
+  background: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1.5rem 0;
+  color: #0093b5;
+  line-height: 1.3em;
+  font-weight: 700;
+}
+
+h1,
+h2 {
+  letter-spacing: 2px;
+  color:  #05556D;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: 1px;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "lato", helvetica, sans-serif;
+}
+
+h1 {
+  color: white;
+  text-shadow: 2px 2px 5px #666;
+  font-size: 4em;
+  letter-spacing: 4px;
+}
+
+a {
+  color: #0093b5;
+  text-decoration: none;
+}
+
+button {
+  background-color: white;
+  border: 0;
+}
+.App-header {
+  color: #05556D;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+ 
+}
+
+.text-color {
+  color: #05556D;;
+}
+.submit-button {
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+    color: white;
+    display: inline-block;
+    background-color: #fc7625;
+    text-align: center;
+    line-height: 36px;
+    padding: 25px;
+    margin: 0;
+    font-size: 1.5rem;
+
+
+}
+
+.submit-button:hover {
+  background-color: #16c1f3;
+  color: white;
+  transition: 0.3s;
+}
+
+.submit-button:hover .link-on-blue {
+  color: #05556d;
+}
+
+.question{
+  text-align: center;
+  margin: 0 auto;
+  max-width: 80%;
+  padding: 20px;
 }
 
 .App-logo {
@@ -13,16 +125,7 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+
 
 .App-link {
   color: #61dafb;

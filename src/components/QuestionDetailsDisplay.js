@@ -3,7 +3,7 @@
  */
 const QuestionDetailsDisplay = (props) => {
     return(
-        <div>
+        <div className="question">
             {/* receiving the updated state from the parent App.js -
             data grabbed in QuestionSearchForm component */}
             {props.question}
