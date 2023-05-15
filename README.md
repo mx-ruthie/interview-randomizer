@@ -85,4 +85,4 @@ Daydreams about improving the mock interview process made manifest in a full-sta
 
 ## Acknowledgements 
 
-Thank you to Techtonica for encouraging me to build this daydream as I continued learning in the Technical Assistant role. Thank you a million times over to my mentor, [Natalia Margolis] (https://github.com/Nmargolis), who has invested countless hours of her time to help me achieve my dream of being a full-stack engineer. Thanks to Scott Gilroy, a straight shooter and excellent teacher. Most of all thanks to my spouse Zach and our children for believing in and rooting for me. 
+Thank you to Techtonica for encouraging me to build this daydream as I continued learning in the Technical Assistant role. Thank you a million times over to my mentor, [Natalia Margolis](https://github.com/Nmargolis), who has invested countless hours of her time to help me achieve my dream of being a full-stack engineer. Thanks to Scott Gilroy, a straight shooter and excellent teacher. Most of all thanks to my spouse Zach and our children for believing in and rooting for me. 
