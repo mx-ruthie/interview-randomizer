@@ -40,7 +40,7 @@ const QuestionSearchForm = (props) => {
     <>
       <form onSubmit={handleSubmit}>
         {/* edited the submit to be a button instead of an input type */}
-        <button type="submit" value="Click for Question">
+        <button className="submit-button" type="submit" value="Click for Question">
           Click for Question
         </button>
       </form>
