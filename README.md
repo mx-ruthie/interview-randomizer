@@ -67,7 +67,7 @@ Daydreams about improving the mock interview process made manifest in a full-sta
   </tr>
 </table>
 
-##Installation
+## Installation
 1. After cloning the repo locally, navigate to the root directory in your terminal and remove owner git with the command `rm -rf .git`. Be sure to reinitialize git so that you can track changes.
 2. Create a database named `mock_interview` so that when you launch the server for the project, the Sequelize models can generate the tables necessary to run the project.
 3. Run `npm install` to install the dependencies for the project.
