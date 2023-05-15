@@ -4,11 +4,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Contents
 
--About
--Tech Stack
--API Reference
--Features
--Installation
--Future Development
--Acknowledgements
+- About
+- Tech Stack
+- API Reference
+- Features
+- Installation
+- Future Development
+- Acknowledgements
 
