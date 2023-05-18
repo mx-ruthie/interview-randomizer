@@ -4,7 +4,7 @@ services:
     type: web
     env: node
     repo: https://github.com/mx-ruthie/interview-randomizer.git
-    buildCommand: npm install && npm run build && cd server && npm install
+    buildCommand: npm install && npm run build && cd ../server && npm install
     startCommand: cd server && node server.js
     envVars:
       - key: DATABASE_URL
