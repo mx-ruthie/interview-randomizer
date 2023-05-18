@@ -8,7 +8,7 @@ import path from 'path';
 
 const app = express();
 ///Users/tpl622_1/code/interview-randomizer
-const REACT_BUILD_DIR = path.join(__dirname, '..', 'build');
+const REACT_BUILD_DIR = path.join(__dirname, 'build');
 app.use(express.static(REACT_BUILD_DIR));
 const PORT = process.env.PORT || 8088;
 
