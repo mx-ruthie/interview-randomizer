@@ -14,5 +14,5 @@ services:
 
 databases:
   - name: db
-    plan: free
+    plan: Starter
     ipAllowList: []
