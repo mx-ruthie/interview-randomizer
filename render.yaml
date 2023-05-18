@@ -3,7 +3,7 @@ services:
     plan: Starter
     type: web
     env: node
-    repo: https://github.com/Yosolita1978/chaGPTandSQL
+    repo: https://github.com/mx-ruthie/interview-randomizer.git
     buildCommand: cd client && npm install && npm run build && cd ../server && npm install
     startCommand: cd server && node server.js
     envVars:
