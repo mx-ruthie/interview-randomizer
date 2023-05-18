@@ -6,8 +6,9 @@ import reportWebVitals from './reportWebVitals';
 import { Auth0Provider } from '@auth0/auth0-react';
 
 
-const DOMAIN = process.env.REACT_APP_AUTH0_DOMAIN;
-const CLIENTID = process.env.REACT_APP_AUTH0_CLIENT_ID;
+const DOMAIN = process.env.AUTH0_DOMAIN;
+const CLIENTID = process.env.AUTH0_CLIENT_ID;
+const IDENTIFIER = process.env.IDENTIFIER;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,7 +17,9 @@ root.render(
     domain={DOMAIN}
     clientId={CLIENTID}
     authorizationParams={{
-      redirect_uri: window.location.origin
+      redirect_uri: window.location.origin,
+      audience: IDENTIFIER,
+      scope: "openid profile email"
     }}>
     <App/>
     </Auth0Provider>
