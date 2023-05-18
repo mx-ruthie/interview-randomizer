@@ -5,8 +5,14 @@ import './App.css';
 import QuestionSearchForm from './components/QuestionSearchForm';
 import QuestionDetailsDisplay from './components/QuestionDetailsDisplay';
 import { useState } from 'react';
+import LoginButton from './components/LoginButton';
+import LogoutButton from './components/LogoutButton';
+import Profile from './components/Profile';
+import { useAuth0 } from  "@auth0/auth0-react";
 
+//import { Auth0Provider } from '@auth0/auth0-react';
 function App() {
+  //const {user} = useAuth0();
   // const [participant, setParticipant] = useState();
    const [question, setQuestion] = useState("Select your category from the dropdown and click 'Randomize' to generate a code challenge.");
    const [testCases, setTestCases] = useState([]);
@@ -14,6 +20,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <LoginButton />
+        <LogoutButton />
+        <Profile />
         <h2>Welcome to the Techtonica Mock Interview Question Randomizer</h2>
         {/* passing setParticipant the function like a prop down to the component, calling
         from the child then passes state back up to the app.js file */}

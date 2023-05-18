@@ -19,22 +19,25 @@ app.get("/", (req, res) => {
 });
 
 app.get("/questions", async (req, res) => {
-// this should really be in a seeding script but took a shortcut to get one piece of data in DB for development in React
-  // const newQuestion = await models.Question.create({ 
-    
-// 			text: "The parameter weekday is true if it is a weekday, and the parameter vacation is true if we are on vacation. We sleep in if it is not a weekday or we're on vacation. Return true if we sleep in.",
-// 			testCases: [
-// 				"sleep_in(false, false) → true;",
-// 				"sleep_in(true, false) → false;",
-// 				"sleep_in(false, true) → true;"
-// 			]
-// 		}
-//     );
   const questions = await models.Question.findAll();
   console.log("All questions:", JSON.stringify(questions));
   res.json(questions);
 });
 
+app.post("/api/user", async (req, res) => {
+  try {
+    const newUser = req.body;
+    const result = await db.query(
+      "INSERT INTO users(createdAt, updatedAt,nickname, given_name, family_name, picture, sub, email) VALUES ($1,$2,$3, $4, $5, $6, $7, $8) RETURNING *",
+      [newUser.createdAT, newUser.updatedAT, newUser.nickname, newUser.given_name, newUser.family_name, newUser.picture, newUser.sub, newUser.email]
+    );
+    console.log("New user created:", result.rows[0]);
+    res.json(result.rows[0]); // send the new user data in the response
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ error: "Failed to create new user" });
+  }
+});
 
 //adding columns after creation of table by adding { alter: true } as a parameter according to this doc
 //https://sequelize.org/docs/v6/core-concepts/model-basics/#model-synchronization
