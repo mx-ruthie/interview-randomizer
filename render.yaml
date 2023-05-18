@@ -1,6 +1,6 @@
 services:
   - name: server
-    plan: free
+    plan: Starter
     type: web
     env: node
     repo: https://github.com/Yosolita1978/chaGPTandSQL
