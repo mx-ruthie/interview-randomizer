@@ -26,9 +26,10 @@ function App() {
         {/* <InterviewerForm /> */}
     
       </header>
-      <QuestionDetailsDisplay question={question} testCases={testCases}/> 
-      <QuestionSearchForm setQuestion={setQuestion} setTestCases={setTestCases}/> 
-     
+      <div className="question">
+        <QuestionDetailsDisplay question={question} testCases={testCases}/> 
+        <QuestionSearchForm setQuestion={setQuestion} setTestCases={setTestCases}/> 
+      </div>
     </div>
   );
 }
