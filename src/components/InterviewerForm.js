@@ -23,7 +23,7 @@ const InterviewerForm = () => {
             console.log(completeStatus);
           }}
         />{" "}
-        Completed Correctly
+        Completed
         <input
           type="radio"
           name="complete-status"
@@ -31,7 +31,7 @@ const InterviewerForm = () => {
           checked={completeStatus === false}
           onChange={(e) => setCompleteStatus(false)}
         />{" "}
-        Did Not Complete Correctly
+        Did Not Complete
         <button type="submit">Update Participant Record</button>
       </form>
     </div>
