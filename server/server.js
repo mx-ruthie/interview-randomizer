@@ -29,12 +29,18 @@ app.get("/questions", async (req, res) => {
 app.post("/api/user", async (req, res) => {
   try {
     const newUser = req.body;
-    const result = await db.query(
-      "INSERT INTO users(createdAt, updatedAt,nickname, given_name, family_name, picture, sub, email) VALUES ($1,$2,$3, $4, $5, $6, $7, $8) RETURNING *",
-      [newUser.createdAT, newUser.updatedAT, newUser.nickname, newUser.given_name, newUser.family_name, newUser.picture, newUser.sub, newUser.email]
+    const result = await models.Participant.create({
+      nickname: newUser.nickname,
+      given_name: newUser.given_name,
+      family_name: newUser.family_name,
+      picture: newUser.picture,
+      sub: newUser.sub,
+      email: newUser.email,
+    }
+   
     );
-    console.log("New user created:", result.rows[0]);
-    res.json(result.rows[0]); // send the new user data in the response
+    console.log("New user created:", result);
+    res.json(result); // send the new user data in the response
   } catch (error) {
     console.error(error);
     return res.status(500).json({ error: "Failed to create new user" });
