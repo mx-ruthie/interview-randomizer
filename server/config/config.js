@@ -7,19 +7,11 @@ dotenv.config();
 console.log("I'm running this file")
 module.exports = {
   development: {
-    username: process.env.DATABASE_USER,
-    password: process.env.DATABASE_PASSWORD,
-    database: process.env.DATABASE,
-    host: process.env.DATABASE_HOST,
-    port: process.env.DATABASE_PORT,
+   url: process.env.DATABASE_URL,
     dialect: 'postgres',
   },
   production: {
-    username: process.env.DATABASE_USER,
-    password: process.env.DATABASE_PASSWORD,
-    database: process.env.DATABASE,
-    host: process.env.DATABASE_HOST,
-    port: process.env.DATABASE_PORT,
-    dialect: 'postgres'
+    url: process.env.DATABASE_URL,
+      dialect: 'postgres'
   }
 };

@@ -13,9 +13,7 @@ dotenv.config()
 console.log("process.env.DATABASE", process.env.DATABASE);
 
 const sequelize = new Sequelize(
-  process.env.DATABASE,
-  process.env.DATABASE_USER,
-  process.env.DATABASE_PASSWORD,
+  process.env.DATABASE_URL,
   {
     dialect: 'postgres',
   },
