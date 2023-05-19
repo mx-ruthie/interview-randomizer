@@ -1,12 +1,14 @@
 import express from "express";
 import cors from "cors";
-
+import {dirname} from 'path';
+import path from "path";
 import models, { sequelize } from './models/index.js';
-import path from 'path';
+
 
 
 
 const app = express();
+const __dirname = dirname(new URL(import.meta.url).pathname);
 ///Users/tpl622_1/code/interview-randomizer
 const REACT_BUILD_DIR = path.join(__dirname, 'build');
 app.use(express.static(REACT_BUILD_DIR));
