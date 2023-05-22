@@ -2,21 +2,21 @@ const getParticipantModel = (sequelize, { DataTypes }) => {
     const Participant = sequelize.define('participant', {
       nickname: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
         validate: {
           notEmpty: true,
         },
       },
       given_name: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
         validate: {
           notEmpty: true,
         },
       },
       family_name: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
         validate: {
           notEmpty: true,
         },

@@ -3,10 +3,10 @@ import cors from "cors";
 import {dirname} from 'path';
 import path from "path";
 import models, { sequelize } from './models/index.js';
-import {auth} from 'express-oauth2-jwt-bearer';
-import auth0 from "auth0";
-import pkg from 'auth0';
-const { AuthenticationClient } = pkg;
+// import {auth} from 'express-oauth2-jwt-bearer';
+// import auth0 from "auth0";
+// import pkg from 'auth0';
+// const { AuthenticationClient } = pkg;
 
 
 
@@ -19,15 +19,15 @@ const REACT_BUILD_DIR = path.join(__dirname, '..', 'build');
 app.use(express.static(REACT_BUILD_DIR));
 const PORT = process.env.PORT || 8088;
 
-const jwtCheck = auth({
-  audience: 'https://mockinterviewproject/api',
-  issuerBaseURL: 'https://dev-qke6400laa0q5ccg.us.auth0.com/',
-  tokenSigningAlg: 'RS256'
-});
-const auth0User = new AuthenticationClient({
-  domain: process.env.REACT_APP_AUTH0_DOMAIN,
-  clientId: process.env.REACT_APP_AUTH0_CLIENT_ID,
-});
+// const jwtCheck = auth({
+//   audience: 'https://mockinterviewproject/api',
+//   issuerBaseURL: 'https://dev-qke6400laa0q5ccg.us.auth0.com/',
+//   tokenSigningAlg: 'RS256'
+// });
+// const auth0User = new AuthenticationClient({
+//   domain: process.env.REACT_APP_AUTH0_DOMAIN,
+//   clientId: process.env.REACT_APP_AUTH0_CLIENT_ID,
+// });
 
 app.use(cors());
 
