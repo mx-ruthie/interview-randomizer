@@ -1,12 +1,15 @@
 import express from "express";
 import cors from "cors";
+import {dirname} from 'path';
+import models, { sequelize } from './models/index.js';
+import path from 'path';
 
-import models, { sequelize } from "./models/index.js";
-import path from "path";
+
 
 const app = express();
+const __dirname = dirname(new URL(import.meta.url).pathname);
 ///Users/tpl622_1/code/interview-randomizer
-const REACT_BUILD_DIR = path.join(__dirname, "..", "build");
+const REACT_BUILD_DIR = path.join(__dirname, 'build');
 app.use(express.static(REACT_BUILD_DIR));
 const PORT = process.env.PORT || 8088;
 
@@ -34,21 +37,16 @@ app.get("/api/users", async (req, res) => {
 app.post("/api/user", async (req, res) => {
   try {
     const newUser = req.body;
-    const result = await db.query(
-      "INSERT INTO users(createdAt, updatedAt,nickname, given_name, family_name, picture, sub, email) VALUES ($1,$2,$3, $4, $5, $6, $7, $8) RETURNING *",
-      [
-        newUser.createdAT,
-        newUser.updatedAT,
-        newUser.nickname,
-        newUser.given_name,
-        newUser.family_name,
-        newUser.picture,
-        newUser.sub,
-        newUser.email,
-      ]
-    );
-    console.log("New user created:", result.rows[0]);
-    res.json(result.rows[0]); // send the new user data in the response
+    const result = await models.Participant.create({
+      nickname: newUser.nickname,
+      given_name: newUser.given_name,
+      family_name: newUser.family_name,
+      picture: newUser.picture,
+      sub: newUser.sub,
+      email: newUser.email,
+    }
+    console.log("New user created:", result);
+    res.json(result); // send the new user data in the response
   } catch (error) {
     console.error(error);
     return res.status(500).json({ error: "Failed to create new user" });
