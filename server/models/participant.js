@@ -2,7 +2,6 @@ const getParticipantModel = (sequelize, { DataTypes }) => {
     const Participant = sequelize.define('participant', {
       nickname: {
         type: DataTypes.STRING,
-        unique: true,
         allowNull: false,
         validate: {
           notEmpty: true,
@@ -10,7 +9,6 @@ const getParticipantModel = (sequelize, { DataTypes }) => {
       },
       given_name: {
         type: DataTypes.STRING,
-        unique: true,
         allowNull: false,
         validate: {
           notEmpty: true,
@@ -18,7 +16,6 @@ const getParticipantModel = (sequelize, { DataTypes }) => {
       },
       family_name: {
         type: DataTypes.STRING,
-        unique: true,
         allowNull: false,
         validate: {
           notEmpty: true,
@@ -26,7 +23,6 @@ const getParticipantModel = (sequelize, { DataTypes }) => {
       },
       picture: {
         type: DataTypes.STRING,
-        unique: true,
         allowNull: false,
         validate: {
           notEmpty: true,
