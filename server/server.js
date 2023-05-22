@@ -49,14 +49,15 @@ app.post("/api/user", async (req, res) => {
   console.log(req.body, "i'm in api/user");
   try {
     const newUser = req.body;
-    const result = await models.Participant.create({
+    const result = await models.Participant.findOrCreate({
+      where: { sub: newUser.sub },
+      defaults: {
       nickname: newUser.nickname,
       given_name: newUser.given_name,
       family_name: newUser.family_name,
       // picture: newUser.picture,
-      sub: newUser.sub,
       email: newUser.email,
-    }
+    }}
    
     );
     console.log("New user created:", result);
