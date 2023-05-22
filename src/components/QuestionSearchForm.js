@@ -1,7 +1,11 @@
 //import fakeData from '../fixtures/questions.json';
 import { useState, useEffect } from "react";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const QuestionSearchForm = (props) => {
+  
+  const { user, isAuthenticated } = useAuth0();
+
   const [questionText, setQuestionText] = useState(
     "The question text will generate here."
   );
@@ -36,6 +40,22 @@ const QuestionSearchForm = (props) => {
     fetchQuestionData();
   };
 
+  const handleNext = async (event) => {
+    event.preventDefault(); 
+    //const accessToken = await getAccessTokenSilently();
+    console.log(user);
+    fetch("/api/user", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+        // Authorization: `Bearer ${accessToken}`
+      },
+      body: JSON.stringify(user)
+    })
+    .then(response => response.json())
+    .then(data => console.log(data)) 
+    .catch(error => console.log(error));
+  }
   return (
     <>
       <form onSubmit={handleSubmit}>
@@ -43,6 +63,10 @@ const QuestionSearchForm = (props) => {
         <button className="submit-button" type="submit" value="Click for Question">
           Click for Question
         </button>
+        {!isAuthenticated ? null : <button onClick={handleNext}>
+          Next Question
+        </button>} 
+                
       </form>
     </>
   );
