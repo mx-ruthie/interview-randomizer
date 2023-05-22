@@ -10,7 +10,7 @@ import models, { sequelize } from './models/index.js';
 const app = express();
 const __dirname = dirname(new URL(import.meta.url).pathname);
 ///Users/tpl622_1/code/interview-randomizer
-const REACT_BUILD_DIR = path.join(__dirname, '..', 'build');
+const REACT_BUILD_DIR = path.join(__dirname, 'build');
 app.use(express.static(REACT_BUILD_DIR));
 const PORT = process.env.PORT || 8088;
 
