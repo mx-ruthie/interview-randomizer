@@ -9,6 +9,7 @@ import LoginButton from './components/LoginButton';
 import LogoutButton from './components/LogoutButton';
 import Profile from './components/Profile';
 //import { useAuth0 } from  "@auth0/auth0-react";
+import Sandbox from './components/Sandbox';
 
 //import { Auth0Provider } from '@auth0/auth0-react';
 function App() {
@@ -37,6 +38,7 @@ function App() {
       </header>
       <QuestionDetailsDisplay question={question} testCases={testCases}/> 
       <QuestionSearchForm setQuestion={setQuestion} setTestCases={setTestCases}/> 
+      <Sandbox question={question} testCases={testCases}/>
      
     </div>
   );
