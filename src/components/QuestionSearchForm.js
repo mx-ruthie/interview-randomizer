@@ -63,8 +63,8 @@ const QuestionSearchForm = (props) => {
         <button className="submit-button" type="submit" value="Click for Question">
           Click for Question
         </button>
-        {!isAuthenticated ? null : <button onClick={handleNext}>
-          Next Question
+        {!isAuthenticated ? null : <button onClick={handleNext} className="submit-button">
+          Mark Question as Complete
         </button>} 
                 
       </form>
