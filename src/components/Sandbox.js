@@ -37,7 +37,7 @@ const Sandbox = ({ question, testCases }) => {
 
   return (
     <button onClick={handleClick} className="submit-button" value="click for sandbox link">
-      Click here for sandbox
+      Click to Generate Sandbox
     </button>
   );
 };
