@@ -31,7 +31,12 @@ const Sandbox = ({ question, testCases }) => {
 
   const url = `https://codesandbox.io/api/v1/sandboxes/define?parameters=${compressedParameters}`;
 
-  return <a href={url}>Click here for sandbox</a>;
+  return (
+    <a href={url} target="_blank" rel="noopener noreferrer">
+      Click here for sandbox
+    </a>
+  );
 };
+
 
 export default Sandbox;
