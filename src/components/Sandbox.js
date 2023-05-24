@@ -31,10 +31,14 @@ const Sandbox = ({ question, testCases }) => {
 
   const url = `https://codesandbox.io/api/v1/sandboxes/define?parameters=${compressedParameters}`;
 
+  const handleClick = () => {
+    window.open(url, "_blank");
+  };
+
   return (
-    <a href={url} target="_blank" rel="noopener noreferrer">
-      Click here for sandbox
-    </a>
+    <button onClick={handleClick} className="submit-button" value="click for sandbox link">
+      Click to Generate Sandbox
+    </button>
   );
 };
 
