@@ -37,6 +37,7 @@ const QuestionSearchForm = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     fetchQuestionData();
+    handleNext(event);
   };
 
   const handleNext = async (event) => {
@@ -56,12 +57,10 @@ const QuestionSearchForm = (props) => {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <button className="submit-button" type="submit" value="Click for Question">
+        {!isAuthenticated ? null : <button className="submit-button" type="submit" value="Click for Question">
           Click for Question
-        </button>
-        {!isAuthenticated ? null : <button onClick={handleNext} className="submit-button">
-          Mark Question as Complete
-        </button>} 
+        </button>}
+        
                 
       </form>
     </>
