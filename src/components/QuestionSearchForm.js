@@ -6,7 +6,7 @@ const QuestionSearchForm = (props) => {
   const { user, isAuthenticated } = useAuth0();
 
   const [questionText, setQuestionText] = useState(
-    "On login, click the Generate Question button for a random code challenge."
+    ""
   );
   const [testcases, setTestcases] = useState([
     "",
@@ -58,7 +58,7 @@ const QuestionSearchForm = (props) => {
     <>
       <form onSubmit={handleSubmit}>
         {!isAuthenticated ? null : <button className="submit-button" type="submit" value="Click for Question">
-          Click for Question
+          Generate Question
         </button>}
         
                 
