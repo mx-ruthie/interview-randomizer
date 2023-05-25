@@ -1,15 +1,11 @@
 body {
-  margin: 0;
-  box-sizing: border-box;
-  font-size: 1.2em;
-  line-height: 1.4em;
-  color: #0093B5;
-  background-color: white;
-  display: flex;
-  height: 100vh;
-  
- 
+  margin: 20;
 
+  font-size: 26px;
+  line-height: 1.4em;
+  color: #0093b5;
+  background-color: white;
+  min-height: 100vh;
 }
 .App {
   text-align: center;
@@ -18,8 +14,7 @@ body {
   padding: 20px;
   justify-content: center;
   margin: auto;
-  width: 90%; /* Adjust this value as needed */
-  max-width: 900px; /* Keep it responsive */  
+  width: 100%;
 }
 
 h1,
@@ -37,7 +32,7 @@ h6 {
 h1,
 h2 {
   letter-spacing: 2px;
-  color:  #05556D;
+  color: #05556d;
 }
 
 h3,
@@ -59,9 +54,9 @@ p {
 }
 
 h1 {
-  color: white;
-  text-shadow: 2px 2px 5px #666;
-  font-size: 4em;
+  color: #05556d;
+  text-shadow: 2px 2px 5px #0093b5;
+  font-size: 44px;
   letter-spacing: 4px;
 }
 
@@ -78,32 +73,45 @@ button {
   -webkit-display: inline-flex;
   -moz-display: inline-flex;
   display: flex;
-  flex-flow: row-reverse wrap;
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  padding: 5px 1rem 5px 0;
+  padding: 5px 1rem 15px 0;
   background: white;
 }
 
+.header {
+  display: flex;
+  flex-direction: column;
+}
+.list-item{
+  color: black;
+  font-family: monospace;
+  font-size: 20px;
+}
+.logo {
+  position: fixed;
+  width: 150px; /* Adjust the width as per your preference */
+  height: auto; /* Maintain aspect ratio */
+  left: 0;
+  margin-left: 50px;
+}
 .text-color {
-  color: #05556D;;
+  color: #05556d;
 }
 .submit-button {
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -o-border-radius: 8px;
-    border-radius: 8px;
-    color: white;
-    display: inline-block;
-    background-color: #fc7625;
-    text-align: center;
-    line-height: 36px;
-    padding: 25px;
-    margin: 0;
-    font-size: 1.5rem;
-
-
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  color: white;
+  display: inline-block;
+  background-color: #fc7625;
+  text-align: center;
+  line-height: 36px;
+  padding: 25px;
+  margin: 10px;
+  font-size: 1.5rem;
 }
 
 .submit-button:hover {
@@ -117,6 +125,10 @@ button {
 }
 
 .log-button {
+  position: fixed;
+  top: 28px;
+  right: 0;
+  margin-right: 60px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -o-border-radius: 2px;
@@ -124,28 +136,30 @@ button {
   color: white;
   background-color: #fc7625;
   text-align: center;
-  line-height: 5px;
-  padding: 5px;
-  margin: 0;
+  padding: 4px;
   font-size: 1rem;
-
-
 }
 
 .log-button:hover {
-background-color: #16c1f3;
-color: white;
-transition: 0.3s;
+  background-color: #16c1f3;
+  color: white;
+  transition: 0.3s;
 }
 
 .log-button:hover .link-on-blue {
-color: #05556d;
+  color: #05556d;
 }
 
-.question{
+.profilebox {
+  padding-top: 115px;
+  padding-bottom: 15px;
+  margin: 5px;
+  
+}
+.question {
   text-align: left;
   margin: 0 auto;
-  max-width: 80%;
+  max-width: 75%;
   padding: 20px;
 }
 
@@ -160,7 +174,9 @@ color: #05556d;
   }
 }
 
-
+.logged-out {
+  margin-top: 17%;
+}
 
 .App-link {
   color: #61dafb;
@@ -183,5 +199,3 @@ ul {
     transform: rotate(360deg);
   }
 }
-
-

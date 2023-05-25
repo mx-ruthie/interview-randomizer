@@ -4,8 +4,10 @@
 const QuestionDetailsDisplay = (props) => {
     return(
         <div className="question">
+            
             {props.question}
-            <ul>{props.testCases.map((testCase, key)=>(<li key={key}>{testCase}</li>))}</ul>
+            <br></br>
+            <ul className="list-item">{props.testCases.map((testCase, key)=>(<li key={key}>{testCase}</li>))}</ul>
         </div>
     )
 }
