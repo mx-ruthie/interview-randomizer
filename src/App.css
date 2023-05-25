@@ -1,7 +1,7 @@
 body {
   margin: 20;
 
-  font-size: 1.2em;
+  font-size: 26px;
   line-height: 1.4em;
   color: #0093b5;
   background-color: white;
@@ -54,9 +54,9 @@ p {
 }
 
 h1 {
-  color: white;
-  text-shadow: 2px 2px 5px #666;
-  font-size: 4em;
+  color: #05556d;
+  text-shadow: 2px 2px 5px #0093b5;
+  font-size: 44px;
   letter-spacing: 4px;
 }
 
@@ -83,6 +83,11 @@ button {
 .header {
   display: flex;
   flex-direction: column;
+}
+.list-item{
+  color: black;
+  font-family: monospace;
+  font-size: 20px;
 }
 .logo {
   position: fixed;
@@ -145,10 +150,16 @@ button {
   color: #05556d;
 }
 
+.profilebox {
+  padding-top: 115px;
+  padding-bottom: 15px;
+  margin: 5px;
+  
+}
 .question {
   text-align: left;
   margin: 0 auto;
-  max-width: 80%;
+  max-width: 75%;
   padding: 20px;
 }
 
@@ -164,7 +175,7 @@ button {
 }
 
 .logged-out {
-  margin-top: 20%;
+  margin-top: 17%;
 }
 
 .App-link {

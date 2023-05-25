@@ -24,12 +24,12 @@ function App() {
       <Header />
       {isAuthenticated ? null : (
         <div className="logged-out">
-          <h2>Techtonica Mock Interview Question Randomizer </h2>
-          <h3>Log in to generate a code challenge.</h3>
+          <h1>Mock Interview Question Randomizer </h1>
+          <h2>Log in to generate a code challenge.</h2>
         </div>
       )}
       <Profile />
-      <QuestionDetailsDisplay question={question} testCases={testCases} />
+      {!isAuthenticated ? null : (<QuestionDetailsDisplay question={question} testCases={testCases} />)}
       <QuestionSearchForm
         setQuestion={setQuestion}
         setTestCases={setTestCases}

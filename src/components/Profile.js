@@ -10,9 +10,9 @@ const Profile = () => {
 
   return (
     isAuthenticated && (
-      <div>
+      <div className="profilebox">
         {/* <img src={user.picture} alt={user.name} /> */}
-        <h2>Best of luck, {user.given_name}! </h2>
+        <h1>Best of luck, {user.given_name}! </h1>
       </div>
     )
   );
