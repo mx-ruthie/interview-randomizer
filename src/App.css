@@ -1,12 +1,11 @@
 body {
-  margin: 0;
-  box-sizing: border-box;
+  margin: 20;
+ 
   font-size: 1.2em;
   line-height: 1.4em;
   color: #0093B5;
   background-color: white;
-  display: flex;
-  height: 100vh;
+  min-height: 100vh;
   
  
 
@@ -78,21 +77,24 @@ button {
   -webkit-display: inline-flex;
   -moz-display: inline-flex;
   display: flex;
-  flex-flow: row-reverse wrap;
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  padding: 5px 1rem 5px 0;
+  padding: 5px 1rem 15px 0;
   background: white;
 }
+
 .header {
   display: flex;
   flex-direction: column;
 
 }
 .logo{
+  position: fixed;
   width: 150px; /* Adjust the width as per your preference */
   height: auto; /* Maintain aspect ratio */
+  left: 0;
+  margin-left: 50px;
 }
 .text-color {
   color: #05556D;;

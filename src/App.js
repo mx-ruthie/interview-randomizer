@@ -4,8 +4,6 @@ import "./App.css";
 import QuestionSearchForm from "./components/QuestionSearchForm";
 import QuestionDetailsDisplay from "./components/QuestionDetailsDisplay";
 import { useState } from "react";
-import LoginButton from "./components/LoginButton";
-import LogoutButton from "./components/LogoutButton";
 import Profile from "./components/Profile";
 import { useAuth0 } from "@auth0/auth0-react";
 import Sandbox from "./components/Sandbox";
@@ -24,6 +22,13 @@ function App() {
   return (
     <div className="App">
       <Header />
+      {isAuthenticated ? null : (
+        <>
+          <h2>Techtonica Mock Interview Question Randomizer </h2>
+          <h3>Log in to generate a code challenge.</h3>
+        </>
+      )}
+      <Profile />
       <QuestionDetailsDisplay question={question} testCases={testCases} />
       <QuestionSearchForm
         setQuestion={setQuestion}
