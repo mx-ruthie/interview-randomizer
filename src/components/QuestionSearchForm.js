@@ -1,4 +1,3 @@
-//import fakeData from '../fixtures/questions.json';
 import { useState, useEffect } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 
@@ -7,12 +6,12 @@ const QuestionSearchForm = (props) => {
   const { user, isAuthenticated } = useAuth0();
 
   const [questionText, setQuestionText] = useState(
-    "The question text will generate here."
+    "Please log in to generate questions."
   );
   const [testcases, setTestcases] = useState([
-    "Testcase 1",
-    "Testcase 2",
-    "Testcase 3",
+    "",
+    "",
+    "",
   ]);
 
   // moved these props outside of the handleSubmit so that they would generate before submitting 
