@@ -8,7 +8,6 @@ import getParticipantModel from './participant.js';
 import getQuestionModel from './question.js';
 
 dotenv.config()
-//console.log("config")
 
 console.log("process.env.DATABASE", process.env.DATABASE);
 

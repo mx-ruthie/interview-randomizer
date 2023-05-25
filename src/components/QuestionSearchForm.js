@@ -1,4 +1,3 @@
-//import fakeData from '../fixtures/questions.json';
 import { useState, useEffect } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 
@@ -7,12 +6,12 @@ const QuestionSearchForm = (props) => {
   const { user, isAuthenticated } = useAuth0();
 
   const [questionText, setQuestionText] = useState(
-    "The question text will generate here."
+    ""
   );
   const [testcases, setTestcases] = useState([
-    "Testcase 1",
-    "Testcase 2",
-    "Testcase 3",
+    "",
+    "",
+    "",
   ]);
 
   // moved these props outside of the handleSubmit so that they would generate before submitting 
@@ -38,12 +37,11 @@ const QuestionSearchForm = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     fetchQuestionData();
+    handleNext(event);
   };
 
   const handleNext = async (event) => {
     event.preventDefault(); 
-    //const accessToken = await getAccessTokenSilently();
-    console.log(user);
     fetch("/api/user", {
       method: "POST",
       headers: {
@@ -59,13 +57,10 @@ const QuestionSearchForm = (props) => {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        {/* edited the submit to be a button instead of an input type */}
-        <button className="submit-button" type="submit" value="Click for Question">
-          Click for Question
-        </button>
-        {!isAuthenticated ? null : <button onClick={handleNext} className="submit-button">
-          Mark Question as Complete
-        </button>} 
+        {!isAuthenticated ? null : <button className="submit-button" type="submit" value="Click for Question">
+          Generate Question
+        </button>}
+        
                 
       </form>
     </>

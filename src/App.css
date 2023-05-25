@@ -6,12 +6,20 @@ body {
   color: #0093B5;
   background-color: white;
   display: flex;
+  height: 100vh;
+  
  
 
 }
 .App {
   text-align: center;
   background: white;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: center;
+  margin: auto;
+  width: 90%; /* Adjust this value as needed */
+  max-width: 900px; /* Keep it responsive */  
 }
 
 h1,
@@ -67,14 +75,15 @@ button {
   border: 0;
 }
 .App-header {
-  color: #05556D;
-  background-color: white;
+  -webkit-display: inline-flex;
+  -moz-display: inline-flex;
   display: flex;
-  flex-direction: column;
+  flex-flow: row-reverse wrap;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
- 
+  width: 100%;
+  padding: 5px 1rem 5px 0;
+  background: white;
 }
 
 .text-color {
@@ -107,8 +116,34 @@ button {
   color: #05556d;
 }
 
-.question{
+.log-button {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  color: white;
+  background-color: #fc7625;
   text-align: center;
+  line-height: 5px;
+  padding: 5px;
+  margin: 0;
+  font-size: 1rem;
+
+
+}
+
+.log-button:hover {
+background-color: #16c1f3;
+color: white;
+transition: 0.3s;
+}
+
+.log-button:hover .link-on-blue {
+color: #05556d;
+}
+
+.question{
+  text-align: left;
   margin: 0 auto;
   max-width: 80%;
   padding: 20px;
@@ -148,3 +183,5 @@ ul {
     transform: rotate(360deg);
   }
 }
+
+

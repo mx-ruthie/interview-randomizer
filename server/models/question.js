@@ -3,7 +3,7 @@ const getQuestionModel = (sequelize, { DataTypes }) => {
       //npx sequelize-cli db:seed:all (this is failing and the error is related to the createdAt, etc.) 
       //I tried to retroactively add timestamps false, etc, but since the tables already exist I need to alter and drop these columns
       //instead of trying to trick sequelize into pretending they were never there by adding them after and hoping
-      //alter table from server.js did the trick -- it didn't
+      //alter table from server.js did the trick, I deleted the tables and re-initialized them so the seed would work
       category: {
         type: DataTypes.STRING,
         allowNull: true,
@@ -16,8 +16,6 @@ const getQuestionModel = (sequelize, { DataTypes }) => {
           notEmpty: true,
         },
       },
-      // added testCases according to convention in camelCase plus updated the index.js file to update the .sync function
-      // to alter table
       testCases: {
         type: DataTypes.JSON,
         allowNull: true,
@@ -25,7 +23,6 @@ const getQuestionModel = (sequelize, { DataTypes }) => {
   
 
     }, {
-      // Exclude timestamps from the table
       timestamps: false
     });
   
