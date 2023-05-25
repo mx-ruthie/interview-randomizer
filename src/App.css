@@ -1,14 +1,11 @@
 body {
   margin: 20;
- 
+
   font-size: 1.2em;
   line-height: 1.4em;
-  color: #0093B5;
+  color: #0093b5;
   background-color: white;
   min-height: 100vh;
-  
- 
-
 }
 .App {
   text-align: center;
@@ -17,8 +14,7 @@ body {
   padding: 20px;
   justify-content: center;
   margin: auto;
-  width: 90%; /* Adjust this value as needed */
-  max-width: 900px; /* Keep it responsive */  
+  width: 100%;
 }
 
 h1,
@@ -36,7 +32,7 @@ h6 {
 h1,
 h2 {
   letter-spacing: 2px;
-  color:  #05556D;
+  color: #05556d;
 }
 
 h3,
@@ -87,9 +83,8 @@ button {
 .header {
   display: flex;
   flex-direction: column;
-
 }
-.logo{
+.logo {
   position: fixed;
   width: 150px; /* Adjust the width as per your preference */
   height: auto; /* Maintain aspect ratio */
@@ -97,23 +92,21 @@ button {
   margin-left: 50px;
 }
 .text-color {
-  color: #05556D;;
+  color: #05556d;
 }
 .submit-button {
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -o-border-radius: 8px;
-    border-radius: 8px;
-    color: white;
-    display: inline-block;
-    background-color: #fc7625;
-    text-align: center;
-    line-height: 36px;
-    padding: 25px;
-    margin: 10px;
-    font-size: 1.5rem;
-
-
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  color: white;
+  display: inline-block;
+  background-color: #fc7625;
+  text-align: center;
+  line-height: 36px;
+  padding: 25px;
+  margin: 10px;
+  font-size: 1.5rem;
 }
 
 .submit-button:hover {
@@ -127,6 +120,10 @@ button {
 }
 
 .log-button {
+  position: fixed;
+  top: 28px;
+  right: 0;
+  margin-right: 60px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -o-border-radius: 2px;
@@ -134,25 +131,21 @@ button {
   color: white;
   background-color: #fc7625;
   text-align: center;
-  line-height: 5px;
-  padding: 5px;
-  margin: 0;
+  padding: 4px;
   font-size: 1rem;
-
-
 }
 
 .log-button:hover {
-background-color: #16c1f3;
-color: white;
-transition: 0.3s;
+  background-color: #16c1f3;
+  color: white;
+  transition: 0.3s;
 }
 
 .log-button:hover .link-on-blue {
-color: #05556d;
+  color: #05556d;
 }
 
-.question{
+.question {
   text-align: left;
   margin: 0 auto;
   max-width: 80%;
@@ -170,7 +163,9 @@ color: #05556d;
   }
 }
 
-
+.logged-out {
+  margin-top: 20%;
+}
 
 .App-link {
   color: #61dafb;
@@ -193,5 +188,3 @@ ul {
     transform: rotate(360deg);
   }
 }
-
-
