@@ -58,7 +58,7 @@ const QuestionSearchForm = (props) => {
     <>
       <form onSubmit={handleSubmit}>
         {!isAuthenticated ? null : <button className="submit-button" type="submit" value="Click for Question">
-          Generate Question
+          Step 1: Generate Question
         </button>}
         
                 
