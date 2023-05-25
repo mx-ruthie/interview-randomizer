@@ -85,7 +85,15 @@ button {
   padding: 5px 1rem 5px 0;
   background: white;
 }
+.header {
+  display: flex;
+  flex-direction: column;
 
+}
+.logo{
+  width: 150px; /* Adjust the width as per your preference */
+  height: auto; /* Maintain aspect ratio */
+}
 .text-color {
   color: #05556D;;
 }
