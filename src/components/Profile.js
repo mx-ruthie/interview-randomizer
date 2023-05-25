@@ -12,7 +12,7 @@ const Profile = () => {
     isAuthenticated && (
       <div className="profilebox">
         {/* <img src={user.picture} alt={user.name} /> */}
-        <h1>Best of luck, {user.given_name}! </h1>
+        <h1>{user.given_name || user.name ? `Best of luck, ${user.given_name || user.name}!` : null}</h1>
       </div>
     )
   );
