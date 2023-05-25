@@ -1,7 +1,6 @@
 //import logo from './logo.svg';
 import './App.css';
 //import ParticipantDetails from './components/ParticipantDetails';
-//import InterviewerForm from './components/InterviewerForm';
 import QuestionSearchForm from './components/QuestionSearchForm';
 import QuestionDetailsDisplay from './components/QuestionDetailsDisplay';
 import { useState } from 'react';
@@ -33,7 +32,6 @@ function App() {
         setQuestion is a callback function that updates the question state defined
         in this component - the question state that gets updates then gets passed 
         down to the QuestionDetails child */}
-        {/* <InterviewerForm /> */}
     
       </header>
       <QuestionDetailsDisplay question={question} testCases={testCases}/> 

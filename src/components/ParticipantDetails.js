@@ -1,9 +1,8 @@
 const ParticipantDetails = (props) => {
-  console.log("hello I'm rendering participant details", props);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // e.target[0] is the first input of the form, which is why it is 0 indexed
-    console.log(e.target[0].value);
     props.setParticipant(e.target[0].value);
   };
   return (

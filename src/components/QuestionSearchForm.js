@@ -42,8 +42,6 @@ const QuestionSearchForm = (props) => {
 
   const handleNext = async (event) => {
     event.preventDefault(); 
-    //const accessToken = await getAccessTokenSilently();
-    console.log(user);
     fetch("/api/user", {
       method: "POST",
       headers: {
@@ -59,7 +57,6 @@ const QuestionSearchForm = (props) => {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        {/* edited the submit to be a button instead of an input type */}
         <button className="submit-button" type="submit" value="Click for Question">
           Click for Question
         </button>

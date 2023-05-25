@@ -12,13 +12,19 @@ function compress(string) {
 }
 
 const Sandbox = ({ question, testCases }) => {
+  let functionNameString;
+  
   const formattedTestCases = testCases.map((testCase) => {
     let splitString = testCase.split("→");
+    functionNameString = splitString[0].split("(")[0];
+    console.log(functionNameString, "function name string");
+    console.log("i'm splitstring[0]", splitString[0]);
     return `console.log(${splitString[0]}); //→ ${splitString[1]}`;
   });
 
+
   console.log(formattedTestCases, "formatted test cases");
-  let text = `/*${question}*/ \n${formattedTestCases.join("\n")}`;
+  let text = `/*${question}*/ \n \nfunction ${functionNameString}() {\n} \n\n${formattedTestCases.join("\n")}`;
 
   let parameters = {
     files: {
