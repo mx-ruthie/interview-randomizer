@@ -55,7 +55,7 @@ app.post("/api/user", async (req, res) => {
       nickname: newUser.nickname,
       given_name: newUser.given_name,
       family_name: newUser.family_name,
-      // picture: newUser.picture,
+      picture: newUser.picture,
       email: newUser.email,
     }}
    

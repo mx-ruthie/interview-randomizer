@@ -21,13 +21,13 @@ const getParticipantModel = (sequelize, { DataTypes }) => {
           notEmpty: true,
         },
       },
-      // picture: {
-      //   type: DataTypes.STRING (1000),
-      //   allowNull: false,
-      //   validate: {
-      //     notEmpty: true,
-      //   },
-      // },
+      picture: {
+        type: DataTypes.STRING (5000),
+        allowNull: true,
+        validate: {
+          notEmpty: true,
+        },
+      },
       sub: {
         type: DataTypes.STRING,
         unique: true,

@@ -21,8 +21,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <LoginButton />
-        <LogoutButton />
+        {isAuthenticated ? null : <LoginButton />}
+        {!isAuthenticated ? null : <LogoutButton />}
         <Profile />
         <h2>Welcome to the Techtonica Mock Interview Question Randomizer</h2>
         {/* passing setParticipant the function like a prop down to the component, calling
