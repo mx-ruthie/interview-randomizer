@@ -6,7 +6,7 @@ const QuestionSearchForm = (props) => {
   const { user, isAuthenticated } = useAuth0();
 
   const [questionText, setQuestionText] = useState(
-    "Please log in to generate questions."
+    "On login, click the Generate Question button for a random code challenge."
   );
   const [testcases, setTestcases] = useState([
     "",
