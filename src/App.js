@@ -56,9 +56,11 @@ function App() {
         isAuthenticated && <ShowSaved />
       )}
       {isAuthenticated && (
-        <button onClick={toggleSaved}>
+        <><br></br>
+        <button onClick={toggleSaved} className="submit-button">
           {currentView === "questionGenerator" ? "View Completed Questions" : "Return to Question Generator"}
         </button>
+        </>
       )}
     </div>
   );

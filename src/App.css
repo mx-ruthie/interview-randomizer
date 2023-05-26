@@ -120,6 +120,28 @@ button {
   transition: 0.3s;
 }
 
+.submit-button-disable {
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  color: white;
+  display: inline-block;
+  background-color: #fc7625;
+  text-align: center;
+  line-height: 36px;
+  padding: 25px;
+  margin: 10px;
+  font-size: 1.5rem;
+}
+
+.submit-button-disable:hover {
+  background-color:  #05556d;
+  color: white;
+  transition: 0.3s;
+}
+
+
 .submit-button:hover .link-on-blue {
   color: #05556d;
 }
