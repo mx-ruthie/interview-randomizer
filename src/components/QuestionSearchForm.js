@@ -28,6 +28,11 @@ const QuestionSearchForm = (props) => {
     const response = await fetch("/questions");
     const questionJSON = await response.json();
     //setting part of the results to state so that the results could be accessed outside of the fetch function
+    //filter questionJSON to only include questions that are not complete
+    //fetch list of questions that the user has completed (another api route)
+    //then use filterarry method to filter out the questions in the questionJSOn where the IDs are not in the array of questions that the user has completed
+    //then create random index based on the filtered aray 
+    //filteredarray = questionjson.filter, etc.
     const randomIndex = Math.floor(Math.random() * questionJSON.length);
     setQuestionText(questionJSON[randomIndex].text);
     setTestcases(questionJSON[randomIndex].testCases);
