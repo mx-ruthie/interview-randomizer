@@ -101,9 +101,16 @@ button {
 }
 
 .show-saved{
-margin-top: 200px;
-
+margin-top: 50px;
+text-align: left;
 }
+
+.show-saved-ul{
+  border: #05556d solid 1px;
+  padding: 10px;
+  margin: 5px;
+}
+
 .submit-button {
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;

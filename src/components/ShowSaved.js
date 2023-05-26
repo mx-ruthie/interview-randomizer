@@ -24,8 +24,7 @@ const ShowSaved = ({participantId}) => {
       <h1>Show Saved Entries</h1>
       {savedEntries.map((entry) => (
         <div key={entry.id}>
-          <h3>Question: {entry.text}</h3>
-          <h4>Test Cases:</h4>
+          <ul className="show-saved-ul">{entry.text}</ul>
         </div>
       ))}
     </div>
