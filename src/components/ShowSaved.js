@@ -13,7 +13,6 @@ const ShowSaved = ({participantId}) => {
       const response = await fetch(`/api/savedquestions/${participantId}`);
       const data = await response.json();
       setSavedEntries(data.questions);
-      console.log("this is logged data",data); //is the currently logged in person always at pos 0?
     } catch (error) {
       console.log(error);
     }
