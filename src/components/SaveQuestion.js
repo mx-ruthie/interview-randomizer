@@ -17,7 +17,7 @@ const SaveQuestion = ({questionId, participantId}) => {
 
 return (    
     
-    <button onClick={markComplete}>Step 3: Mark Complete to Save</button>
+    <button onClick={markComplete} className="submit-button" value="save question as complete">Step 3: Mark Complete to Save</button>
 
 )}
 
