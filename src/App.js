@@ -8,15 +8,19 @@ import Profile from "./components/Profile";
 import { useAuth0 } from "@auth0/auth0-react";
 import Sandbox from "./components/Sandbox";
 import Header from "./components/Header";
+import SaveQuestion from "./components/SaveQuestion";
 
 //import { Auth0Provider } from '@auth0/auth0-react';
 function App() {
-  //const {user} = useAuth0();
-  // const [participant, setParticipant] = useState();
+  
   const [question, setQuestion] = useState(
     "Select your category from the dropdown and click 'Randomize' to generate a code challenge."
   );
   const [testCases, setTestCases] = useState([]);
+
+  const[questionId, setQuestionId] = useState();
+
+  const [participantId, setParticipantId] = useState();
 
   const { isAuthenticated } = useAuth0();
   return (
@@ -33,9 +37,14 @@ function App() {
       <QuestionSearchForm
         setQuestion={setQuestion}
         setTestCases={setTestCases}
+        setQuestionId={setQuestionId}
+        setParticipantId={setParticipantId} 
       />
       {!isAuthenticated ? null : (
         <Sandbox question={question} testCases={testCases} />
+      )}
+      {(isAuthenticated && questionId && participantId) && (
+        <SaveQuestion questionId={questionId} participantId={participantId}/>
       )}
     </div>
   );

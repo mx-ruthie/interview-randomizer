@@ -23,11 +23,14 @@ const models = {
   Question: getQuestionModel(sequelize, Sequelize),
 };
 
-Object.keys(models).forEach((key) => {
-  if ('associate' in models[key]) {
-    models[key].associate(models);
-  }
-});
+models.Participant.belongsToMany(models.Question, { through: "ParticipantQuestion"});
+models.Question.belongsToMany(models.Participant, { through: "ParticipantQuestion" });
+
+// Object.keys(models).forEach((key) => {
+//   if ('associate' in models[key]) {
+//     models[key].associate(models);
+//   }
+// });
 
 export { sequelize };
 

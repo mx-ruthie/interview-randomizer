@@ -14,6 +14,7 @@ const QuestionSearchForm = (props) => {
     "",
   ]);
 
+
   // moved these props outside of the handleSubmit so that they would generate before submitting 
   useEffect(() => {
   props.setQuestion(questionText);
@@ -27,9 +28,15 @@ const QuestionSearchForm = (props) => {
     const response = await fetch("/questions");
     const questionJSON = await response.json();
     //setting part of the results to state so that the results could be accessed outside of the fetch function
+    //filter questionJSON to only include questions that are not complete
+    //fetch list of questions that the user has completed (another api route)
+    //then use filterarry method to filter out the questions in the questionJSOn where the IDs are not in the array of questions that the user has completed
+    //then create random index based on the filtered aray 
+    //filteredarray = questionjson.filter, etc.
     const randomIndex = Math.floor(Math.random() * questionJSON.length);
     setQuestionText(questionJSON[randomIndex].text);
     setTestcases(questionJSON[randomIndex].testCases);
+    props.setQuestionId(questionJSON[randomIndex].id);
     return questionJSON;
   }
   
@@ -42,16 +49,19 @@ const QuestionSearchForm = (props) => {
 
   const handleNext = async (event) => {
     event.preventDefault(); 
-    fetch("/api/user", {
+    await fetch("/api/user", {
       method: "POST",
       headers: {
         "content-type": "application/json",
-        // Authorization: `Bearer ${accessToken}`
       },
       body: JSON.stringify(user)
     })
     .then(response => response.json())
-    .then(data => console.log(data)) 
+    .then(data => {
+      console.log("i am data", data);
+      //todo: verify this with new user that doesn't already exist
+      props.setParticipantId(data[0].id);
+    }) 
     .catch(error => console.log(error));
   }
   return (
