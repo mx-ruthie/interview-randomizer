@@ -53,7 +53,7 @@ function App() {
       ) : (
         isAuthenticated && <ShowSaved participantId={participantId} className="show-saved"/>
       )}
-      {isAuthenticated && (
+      {isAuthenticated && participantId && (
         <>
           <br></br>
           <button onClick={toggleSaved} className="submit-button">
