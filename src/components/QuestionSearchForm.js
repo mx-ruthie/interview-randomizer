@@ -14,6 +14,7 @@ const QuestionSearchForm = (props) => {
     "",
   ]);
 
+
   // moved these props outside of the handleSubmit so that they would generate before submitting 
   useEffect(() => {
   props.setQuestion(questionText);
@@ -30,6 +31,7 @@ const QuestionSearchForm = (props) => {
     const randomIndex = Math.floor(Math.random() * questionJSON.length);
     setQuestionText(questionJSON[randomIndex].text);
     setTestcases(questionJSON[randomIndex].testCases);
+    props.setQuestionId(questionJSON[randomIndex].id);
     return questionJSON;
   }
   
@@ -42,16 +44,19 @@ const QuestionSearchForm = (props) => {
 
   const handleNext = async (event) => {
     event.preventDefault(); 
-    fetch("/api/user", {
+    await fetch("/api/user", {
       method: "POST",
       headers: {
         "content-type": "application/json",
-        // Authorization: `Bearer ${accessToken}`
       },
       body: JSON.stringify(user)
     })
     .then(response => response.json())
-    .then(data => console.log(data)) 
+    .then(data => {
+      console.log("i am data", data);
+      //todo: verify this with new user that doesn't already exist
+      props.setParticipantId(data[0].id);
+    }) 
     .catch(error => console.log(error));
   }
   return (

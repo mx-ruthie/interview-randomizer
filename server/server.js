@@ -24,6 +24,22 @@ app.get("/questions", async (req, res) => {
   res.json(questions);
 });
 
+app.post("/api/completequestion", async (req, res) => {
+console.log("req.body", req.body)  
+try{
+  //req.body 
+  //{questionId: 1, participantId: 2}
+  const {questionId, participantId} = req.body;
+  const participant = await models.Participant.findByPk(participantId);
+  const result = await participant.addQuestion(questionId);
+  console.log("result", result);
+  return res.json(result);
+} catch (error) {
+  console.error(error);
+  return res.status(500).json({ error: "Failed to save completed question" });
+}
+});
+
 app.post("/api/user", async (req, res) => {
   try {
     const newUser = req.body;
