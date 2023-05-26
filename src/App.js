@@ -1,16 +1,14 @@
-//import logo from './logo.svg';
+import React, { useState } from "react";
 import "./App.css";
-//import ParticipantDetails from './components/ParticipantDetails';
 import QuestionSearchForm from "./components/QuestionSearchForm";
 import QuestionDetailsDisplay from "./components/QuestionDetailsDisplay";
-import { useState } from "react";
 import Profile from "./components/Profile";
 import { useAuth0 } from "@auth0/auth0-react";
 import Sandbox from "./components/Sandbox";
 import Header from "./components/Header";
 import SaveQuestion from "./components/SaveQuestion";
 import ShowSaved from "./components/ShowSaved";
-//import { Auth0Provider } from '@auth0/auth0-react';
+
 function App() {
   const [showSaved, setShowSaved] = useState(false);
   const [currentView, setCurrentView] = useState("questionGenerator");
@@ -37,7 +35,7 @@ function App() {
           <h2>Log in to generate a code challenge.</h2>
         </div>
       )}
-      <Profile />
+      {!showSaved && isAuthenticated && <Profile />} 
       {!showSaved && isAuthenticated ? (
         <>
           <QuestionDetailsDisplay question={question} testCases={testCases} />
@@ -53,13 +51,14 @@ function App() {
           )}
         </>
       ) : (
-        isAuthenticated && <ShowSaved />
+        isAuthenticated && <ShowSaved participantId={participantId} className="show-saved"/>
       )}
       {isAuthenticated && (
-        <><br></br>
-        <button onClick={toggleSaved} className="submit-button">
-          {currentView === "questionGenerator" ? "View Completed Questions" : "Return to Question Generator"}
-        </button>
+        <>
+          <br></br>
+          <button onClick={toggleSaved} className="submit-button">
+            {currentView === "questionGenerator" ? "View Completed Questions" : "Return to Question Generator"}
+          </button>
         </>
       )}
     </div>
