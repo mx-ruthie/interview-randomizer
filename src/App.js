@@ -45,21 +45,28 @@ function App() {
             setQuestionId={setQuestionId}
             setParticipantId={setParticipantId}
           />
-          <Sandbox question={question} testCases={testCases} />
+          {participantId && <Sandbox question={question} testCases={testCases} />}
           {isAuthenticated && questionId && participantId && (
             <SaveQuestion questionId={questionId} participantId={participantId} />
           )}
+          {isAuthenticated && participantId && (
+            <>
+              <br />
+              <button onClick={toggleSaved} className="submit-button">
+                {currentView === "questionGenerator" ? "View Completed Questions" : "Return to Question Generator"}
+              </button>
+            </>
+          )}
         </>
       ) : (
-        isAuthenticated && <ShowSaved participantId={participantId} className="show-saved"/>
-      )}
-      {isAuthenticated && participantId && (
-        <>
-          <br></br>
-          <button onClick={toggleSaved} className="submit-button">
-            {currentView === "questionGenerator" ? "View Completed Questions" : "Return to Question Generator"}
-          </button>
-        </>
+        isAuthenticated && (
+          <>
+            <button onClick={toggleSaved} className="submit-button">
+              {currentView === "questionGenerator" ? "View Completed Questions" : "Return to Question Generator"}
+            </button>
+            <ShowSaved participantId={participantId} className="show-saved" />
+          </>
+        )
       )}
     </div>
   );
