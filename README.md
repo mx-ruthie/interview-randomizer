@@ -6,7 +6,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 - About
 - Tech Stack
-- API Reference
 - Features
 - Installation
 - Future Development
@@ -14,10 +13,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## About the Randomizer
 
+Daydreams about improving the mock interview process made manifest in a full-stack app styled to resemble the Techtonica.org website. Written to revise the current process wherein volunteers choose from a static list of 10 sample code challenges for every mock interview, participants at Techtonica can share their screens and generate a randomly selected code challenge question to work through. Participants can also mark questions as complete, and refer back to those questions later as well.
+
+
+Test the app with your own gmail credentials for a personalized experience, or use these testing credentials: 
+#### Email: mockinterviewtester@techtonica.org
+#### Password: Techtonica23!
 [Techtonica Mock Interview Question Randomizer](https://server-xmwi.onrender.com)
-
-Daydreams about improving the mock interview process made manifest in a full-stack app styled to resemble the Techtonica.org website. Written to revise the current process wherein volunteers choose from a static list of 10 sample code challenges for every mock interview, participants at Techtonica can share their screens and generate a randomly selected code challenge question to work through. Marking the status of a code challenge as completed prevents the recurrence of that question, allowing the site to be used for practice and interviews alike. 
-
 ## Tech Stack
 
 <table align="center">
@@ -58,33 +60,23 @@ Daydreams about improving the mock interview process made manifest in a full-sta
   </tr>
 </table>
 
-## API Reference
-<table align="center">
-  <tr>
-     <td align="center" width="96">
-        <img src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/052018/untitled-1_95.png?FGKbe7gQnsFBNpz1uyNAFUjVc6jsDai3&itok=A74Mzxay" width="48" height="48" alt="OpenAI" />
-      <br>Open AI
-    </td>
-  
-  </tr>
-</table>
 
 ## Installation
 1. After cloning the repo locally, navigate to the root directory in your terminal and remove owner git with the command `rm -rf .git`. Be sure to reinitialize git so that you can track changes.
 2. Create a database named `mock_interview` so that when you launch the server for the project, the Sequelize models can generate the tables necessary to run the project.
 3. Run `npm install` to install the dependencies for the project.
-4. Navigate to the server directory and run 'npm start' to run the server on localhost:8088.
-5. Navigate back up to the root directory and into the src directory with `cd ..` then `cd src`.
-6. Run the command `npm run build` which will run the development build.
-7. Run the commandy `npm start` to launch the client on localhost:3000.
+4. Navigate to the server directory and run `npm start` to run the server on localhost:8088.
+5. In a new terminal from the root directory run the command `npm run build` which will run the development build.
+7. Next run the command `npm start` to launch the client on localhost:3000.
 
 
 ## Future Development 
 
+- SQL command logic to prevent saved questions from getting generated randomly
 - Sorting by category of question
 - Form to submit additional challenges 
-- CodeSandbox integration to complete challenge right from the screen
+
 
 ## Acknowledgements 
 
-Thank you to Techtonica for encouraging me to build this daydream as I continued learning in the Technical Assistant role. Thank you a million times over to my mentor, [Natalia Margolis](https://github.com/Nmargolis), who has invested countless hours of her time to help me achieve my dream of being a full-stack engineer. Thanks to Scott Gilroy, a straight shooter and excellent teacher. Most of all thanks to my spouse Zach and our children for believing in and rooting for me. 
+Thank you to Techtonica for encouraging me to build this daydream as I continued learning in the Technical Assistant role. Thank you a million times over to my mentor, [Natalia Margolis](https://github.com/Nmargolis), who has invested countless hours of her time to help me achieve my dream of being a full-stack engineer. Thanks to Scott Gilroy, a straight shooter and excellent teacher. Thanks also to [Monikka de la Zerda](https://www.linkedin.com/in/mdelazerda/) for debugging the most elusive issue I faced. I could never have done this without my spouse Zach's continuous support, kind words, and faith in me. Thanks finally to our children for not caring about this at all because I'm they're mom and they love me for that most of all. 
