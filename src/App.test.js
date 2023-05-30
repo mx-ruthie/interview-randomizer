@@ -3,6 +3,6 @@ import App from './App';
 
 test('renders learn react link', () => {
   render(<App />);
-  const linkElement = screen.getByText(/Techtonica/i);
+  const linkElement = screen.getByText(/Randomizer/i);
   expect(linkElement).toBeInTheDocument();
 });
