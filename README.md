@@ -15,11 +15,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Daydreams about improving the mock interview process made manifest in a full-stack app styled to resemble the Techtonica.org website. Written to revise the current process wherein volunteers choose from a static list of 10 sample code challenges for every mock interview, participants at Techtonica can share their screens and generate a randomly selected code challenge question to work through. Participants can also mark questions as complete, and refer back to those questions later as well.
 
-
-Test the app with your own gmail credentials for a personalized experience, or use these testing credentials: 
-#### Email: mockinterviewtester@techtonica.org
-#### Password: Techtonica23!
-[Techtonica Mock Interview Question Randomizer](https://server-xmwi.onrender.com)
 ## Tech Stack
 
 <table align="center">
