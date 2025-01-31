@@ -15,6 +15,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Daydreams about improving the mock interview process made manifest in a full-stack app styled to resemble the Techtonica.org website. Written to revise the current process wherein volunteers choose from a static list of 10 sample code challenges for every mock interview, participants at Techtonica can share their screens and generate a randomly selected code challenge question to work through. Participants can also mark questions as complete, and refer back to those questions later as well.
 
+
+https://github.com/user-attachments/assets/f2fc7d7c-ee13-4b7d-a1b2-7237f9788b54
+
+
+
 ## Tech Stack
 
 <table align="center">
